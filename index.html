@@ -23,10 +23,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:480px 1fr;padding-top:58px;border-bottom:1.5px solid var(--black)}
-.hero-photo{position:relative;overflow:hidden;background:var(--blue3);border-right:1.5px solid var(--black);display:flex;align-items:flex-end;justify-content:center}
+.hero-photo{position:relative;overflow:hidden;background:#deeef8;border-right:1.5px solid var(--black);min-height:500px}
 .hero-bg-circle{position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:480px;height:480px;border-radius:50%;background:var(--blue2);z-index:0}
-.portrait-svg{position:relative;z-index:1;width:100%;max-width:420px}
-.chip{position:absolute;z-index:10;background:var(--white);border:1.5px solid var(--black);border-radius:10px;padding:9px 14px;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.04em;line-height:1.4;box-shadow:3px 3px 0 var(--black)}
+
+.chip{position:absolute;z-index:20;background:var(--white);border:1.5px solid var(--black);border-radius:10px;padding:9px 14px;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.04em;line-height:1.4;box-shadow:3px 3px 0 var(--black)}
 .c1{top:90px;left:22px}.c2{top:112px;right:18px}.c3{bottom:110px;left:18px}
 
 .hero-text{padding:72px 56px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
@@ -196,110 +196,87 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
 
 <div class="hero">
   <div class="hero-photo">
-    <div class="hero-bg-circle"></div>
     <div class="chip c1">GPA 4.3 / 4.5<br>Korea University</div>
-    <div class="chip c2">Available · Seoul 🇰🇷</div>
+    <div class="chip c2">Available · Seoul &#127472;&#127479;</div>
     <div class="chip c3">EN · AR · FR · JA</div>
+    <svg viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;top:0;left:0">
+      <rect width="420" height="560" fill="#deeef8"/>
 
-    <!-- PORTRAIT: female, long dark wavy hair, brown eyes, black blazer, white shirt -->
-    <svg class="portrait-svg" viewBox="0 0 420 640" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="210" cy="560" r="260" fill="#b8dff0" opacity="0.45"/>
+      <!-- dot grid background -->
+      <g opacity="0.15" fill="#2a6a9a">
+        <circle cx="48" cy="56" r="2"/><circle cx="88" cy="56" r="2"/><circle cx="128" cy="56" r="2"/><circle cx="168" cy="56" r="2"/><circle cx="208" cy="56" r="2"/><circle cx="248" cy="56" r="2"/><circle cx="288" cy="56" r="2"/><circle cx="328" cy="56" r="2"/><circle cx="368" cy="56" r="2"/>
+        <circle cx="48" cy="96" r="2"/><circle cx="88" cy="96" r="2"/><circle cx="128" cy="96" r="2"/><circle cx="168" cy="96" r="2"/><circle cx="208" cy="96" r="2"/><circle cx="248" cy="96" r="2"/><circle cx="288" cy="96" r="2"/><circle cx="328" cy="96" r="2"/><circle cx="368" cy="96" r="2"/>
+        <circle cx="48" cy="136" r="2"/><circle cx="88" cy="136" r="2"/><circle cx="368" cy="136" r="2"/><circle cx="328" cy="136" r="2"/>
+        <circle cx="48" cy="424" r="2"/><circle cx="88" cy="424" r="2"/><circle cx="128" cy="424" r="2"/><circle cx="168" cy="424" r="2"/><circle cx="208" cy="424" r="2"/><circle cx="248" cy="424" r="2"/><circle cx="288" cy="424" r="2"/><circle cx="328" cy="424" r="2"/><circle cx="368" cy="424" r="2"/>
+        <circle cx="48" cy="464" r="2"/><circle cx="88" cy="464" r="2"/><circle cx="128" cy="464" r="2"/><circle cx="168" cy="464" r="2"/><circle cx="208" cy="464" r="2"/><circle cx="248" cy="464" r="2"/><circle cx="288" cy="464" r="2"/><circle cx="328" cy="464" r="2"/><circle cx="368" cy="464" r="2"/>
+        <circle cx="48" cy="504" r="2"/><circle cx="88" cy="504" r="2"/><circle cx="128" cy="504" r="2"/><circle cx="168" cy="504" r="2"/><circle cx="208" cy="504" r="2"/><circle cx="248" cy="504" r="2"/><circle cx="288" cy="504" r="2"/><circle cx="328" cy="504" r="2"/><circle cx="368" cy="504" r="2"/>
+      </g>
 
-  <!-- ── HAIR BACK LAYER - drawn first so it sits behind everything ── -->
-  <!-- Wide back mass of hair falling from top of head all the way down -->
-  <path d="M118 155 C100 165 82 195 74 240 C66 285 68 350 72 420 C76 490 86 540 98 590 L140 585 C128 535 118 482 114 420 C110 355 110 290 116 240 C120 208 124 182 130 168 Z" fill="#7a4828"/>
-  <path d="M302 155 C320 165 338 195 346 240 C354 285 352 350 348 420 C344 490 334 540 322 590 L280 585 C292 535 302 482 306 420 C310 355 310 290 304 240 C300 208 296 182 290 168 Z" fill="#7a4828"/>
-  <!-- Center back panel - fills gap between the two sides -->
-  <path d="M130 168 C150 155 175 148 210 148 C245 148 270 155 290 168 L295 220 L298 320 L295 430 L288 540 L280 585 L140 585 L132 540 L125 430 L122 320 L125 220 Z" fill="#7a4828"/>
+      <!-- concentric rings -->
+      <circle cx="210" cy="280" r="195" stroke="#5aaad4" stroke-width="0.8" opacity="0.12" fill="none"/>
+      <circle cx="210" cy="280" r="160" stroke="#5aaad4" stroke-width="0.8" opacity="0.15" fill="none"/>
+      <circle cx="210" cy="280" r="125" stroke="#5aaad4" stroke-width="1" opacity="0.18" fill="none"/>
 
-  <!-- Straight hair texture lines on back -->
-  <line x1="150" y1="580" x2="148" y2="300" stroke="#8a5530" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
-  <line x1="170" y1="585" x2="168" y2="280" stroke="#8a5530" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
-  <line x1="210" y1="586" x2="210" y2="270" stroke="#8a5530" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
-  <line x1="250" y1="585" x2="252" y2="280" stroke="#8a5530" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
-  <line x1="270" y1="580" x2="272" y2="300" stroke="#8a5530" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+      <!-- rotating outer square -->
+      <rect x="105" y="175" width="210" height="210" rx="6" transform="rotate(12 210 280)" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.3"/>
+      <!-- rotating mid square -->
+      <rect x="125" y="195" width="170" height="170" rx="5" transform="rotate(28 210 280)" fill="none" stroke="#5aaad4" stroke-width="1" opacity="0.22"/>
+      <!-- inner filled diamond -->
+      <rect x="152" y="207" width="116" height="116" rx="8" transform="rotate(45 210 265)" fill="#c2e4f6" stroke="#5aaad4" stroke-width="1.2" opacity="0.65"/>
 
-  <!-- ── BLAZER BODY ── -->
-  <path d="M55 640 L55 468 C55 438 84 408 124 396 L170 380 L210 438 L250 380 L296 396 C336 408 365 438 365 468 L365 640Z" fill="#111"/>
-  <path d="M170 380 L210 438 L172 492 L124 396Z" fill="#1c1c1c"/>
-  <path d="M250 380 L210 438 L248 492 L296 396Z" fill="#1c1c1c"/>
-  <path d="M195 380 L210 406 L225 380 L218 370 L202 370Z" fill="#f4f0ec"/>
-  <rect x="208" y="404" width="4" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
-  <rect x="208" y="416" width="4" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
-  <path d="M55 438 L124 396" stroke="#222" stroke-width="1" opacity="0.5"/>
-  <path d="M365 438 L296 396" stroke="#222" stroke-width="1" opacity="0.5"/>
-  <path d="M86 472 L86 494 L128 494 L128 472" stroke="#2a2a2a" stroke-width="1.2" fill="none"/>
+      <!-- dashed orbit ring -->
+      <circle cx="210" cy="280" r="90" stroke="#5aaad4" stroke-width="1.2" stroke-dasharray="8 5" opacity="0.35" fill="none"/>
 
-  <!-- Hair over shoulders - front side panels falling over blazer -->
-  <path d="M80 240 L76 310 L80 400 L96 450 L124 420 L122 360 L118 280 L110 218Z" fill="#7a4828"/>
-  <path d="M340 240 L344 310 L340 400 L324 450 L296 420 L298 360 L302 280 L310 218Z" fill="#7a4828"/>
+      <!-- cardinal dots on orbit -->
+      <circle cx="210" cy="190" r="7" fill="#5aaad4" opacity="0.75"/>
+      <circle cx="300" cy="280" r="7" fill="#5aaad4" opacity="0.75"/>
+      <circle cx="210" cy="370" r="7" fill="#5aaad4" opacity="0.75"/>
+      <circle cx="120" cy="280" r="7" fill="#5aaad4" opacity="0.75"/>
 
-  <!-- ── NECK ── -->
-  <path d="M183 316 C182 358 180 374 178 380 L210 393 L242 380 C240 374 238 358 237 316Z" fill="#f2d4b0"/>
+      <!-- lines from center to orbit -->
+      <line x1="210" y1="242" x2="210" y2="198" stroke="#5aaad4" stroke-width="1" opacity="0.28" stroke-dasharray="3 3"/>
+      <line x1="252" y1="280" x2="293" y2="280" stroke="#5aaad4" stroke-width="1" opacity="0.28" stroke-dasharray="3 3"/>
+      <line x1="210" y1="318" x2="210" y2="363" stroke="#5aaad4" stroke-width="1" opacity="0.28" stroke-dasharray="3 3"/>
+      <line x1="168" y1="280" x2="127" y2="280" stroke="#5aaad4" stroke-width="1" opacity="0.28" stroke-dasharray="3 3"/>
 
-  <!-- ── HEAD ── -->
-  <ellipse cx="210" cy="258" rx="90" ry="102" fill="#f2d4b0"/>
+      <!-- center circle -->
+      <circle cx="210" cy="280" r="42" fill="#5aaad4" opacity="0.95"/>
+      <circle cx="210" cy="280" r="30" fill="#2a7ab4" opacity="0.9"/>
+      <text x="210" y="287" font-size="17" font-weight="700" fill="white" font-family="monospace" text-anchor="middle" letter-spacing="3">ML</text>
 
-  <!-- ── EARS ── -->
-  <ellipse cx="121" cy="268" rx="16" ry="21" fill="#eccc9e"/>
-  <ellipse cx="299" cy="268" rx="16" ry="21" fill="#eccc9e"/>
-  <ellipse cx="121" cy="268" rx="9" ry="13" fill="#dab888" opacity="0.4"/>
-  <ellipse cx="299" cy="268" rx="9" ry="13" fill="#dab888" opacity="0.4"/>
-  <circle cx="121" cy="283" r="4" fill="#c8a040"/>
-  <circle cx="121" cy="283" r="2.5" fill="#e8c060"/>
+      <!-- corner accent squares -->
+      <rect x="44" y="220" width="20" height="20" rx="3" fill="#a8d8f0" opacity="0.55"/>
+      <rect x="356" y="220" width="20" height="20" rx="3" fill="#a8d8f0" opacity="0.55"/>
+      <rect x="44" y="300" width="20" height="20" rx="3" fill="#a8d8f0" opacity="0.55"/>
+      <rect x="356" y="300" width="20" height="20" rx="3" fill="#a8d8f0" opacity="0.55"/>
 
-  <!-- ── HAIR TOP - cap over head ── -->
-  <ellipse cx="210" cy="155" rx="93" ry="68" fill="#7a4828"/>
-  <!-- Straight fringe / top hair flat across forehead -->
-  <path d="M122 168 L122 196 L298 196 L298 168 C278 146 244 138 210 138 C176 138 142 146 122 168Z" fill="#7a4828"/>
-  <!-- fringe bottom edge -->
-  <line x1="124" y1="195" x2="296" y2="195" stroke="#5a3015" stroke-width="1.5" opacity="0.35"/>
-  <!-- center part -->
-  <line x1="210" y1="130" x2="210" y2="196" stroke="#5a3015" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-  <!-- hair highlight -->
-  <path d="M185 132 L185 172" stroke="rgba(255,255,255,0.09)" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <!-- arcs top and bottom -->
+      <path d="M110 128 Q210 75 310 128" stroke="#5aaad4" stroke-width="1.2" fill="none" opacity="0.22" stroke-dasharray="7 5"/>
+      <path d="M110 432 Q210 485 310 432" stroke="#5aaad4" stroke-width="1.2" fill="none" opacity="0.22" stroke-dasharray="7 5"/>
 
-  <!-- ── EYEBROWS ── -->
-  <path d="M150 216 C161 207 179 205 193 210" stroke="#3a2010" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M227 210 C241 205 259 207 270 216" stroke="#3a2010" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <!-- label chips -->
+      <rect x="30" y="252" width="62" height="16" rx="3" fill="rgba(255,255,255,0.8)"/>
+      <text x="61" y="263.5" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">STRATEGY</text>
+      <rect x="328" y="252" width="62" height="16" rx="3" fill="rgba(255,255,255,0.8)"/>
+      <text x="359" y="263.5" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">ANALYTICS</text>
+      <rect x="158" y="158" width="104" height="16" rx="3" fill="rgba(255,255,255,0.8)"/>
+      <text x="210" y="169.5" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">OPERATIONS</text>
+      <rect x="140" y="368" width="140" height="16" rx="3" fill="rgba(255,255,255,0.8)"/>
+      <text x="210" y="379.5" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">SUPPLY CHAIN</text>
 
-  <!-- ── EYES ── -->
-  <ellipse cx="171" cy="236" rx="21" ry="14" fill="white"/>
-  <ellipse cx="249" cy="236" rx="21" ry="14" fill="white"/>
-  <circle cx="171" cy="236" r="11" fill="#6a3c18"/>
-  <circle cx="249" cy="236" r="11" fill="#6a3c18"/>
-  <circle cx="171" cy="236" r="6" fill="#0e0602"/>
-  <circle cx="249" cy="236" r="6" fill="#0e0602"/>
-  <circle cx="176" cy="230" r="3.2" fill="rgba(255,255,255,0.82)"/>
-  <circle cx="254" cy="230" r="3.2" fill="rgba(255,255,255,0.82)"/>
-  <circle cx="167" cy="240" r="1.4" fill="rgba(255,255,255,0.3)"/>
-  <circle cx="245" cy="240" r="1.4" fill="rgba(255,255,255,0.3)"/>
-  <path d="M150 228 C159 219 183 219 192 228" stroke="#0e0602" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  <path d="M228 228 C237 219 261 219 270 228" stroke="#0e0602" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  <path d="M151 244 C161 250 181 250 191 244" stroke="#6a3c18" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
-  <path d="M229 244 C239 250 259 250 269 244" stroke="#6a3c18" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- ── NOSE ── -->
-  <path d="M202 256 C204 267 208 276 210 278" stroke="#c09a72" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <path d="M218 256 C216 267 212 276 210 278" stroke="#c09a72" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <path d="M195 279 C202 284 218 284 225 279" stroke="#c09a72" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-  <!-- ── LIPS ── -->
-  <path d="M183 301 C192 293 202 291 210 291 C218 291 228 293 237 301 C228 310 218 315 210 315 C202 315 192 310 183 301Z" fill="#dd9e8a"/>
-  <path d="M183 301 C192 294 202 291 210 291 C218 291 228 294 237 301" fill="#e8aaa0"/>
-  <path d="M193 301 C200 296 206 293 210 291 C214 293 220 296 227 301" fill="#e8b0a8" opacity="0.6"/>
-  <path d="M200 304 C205 300 215 300 220 304" stroke="rgba(255,255,255,0.22)" stroke-width="2" fill="none" stroke-linecap="round"/>
-
-  <!-- ── BLUSH ── -->
-  <ellipse cx="142" cy="274" rx="24" ry="15" fill="rgba(220,160,140,0.09)"/>
-  <ellipse cx="278" cy="274" rx="24" ry="15" fill="rgba(220,160,140,0.09)"/>
-
-  <!-- deco circles -->
-  <circle cx="50" cy="160" r="18" fill="none" stroke="rgba(90,170,212,0.5)" stroke-width="2"/>
-  <circle cx="50" cy="160" r="8" fill="rgba(90,170,212,0.2)"/>
-  <circle cx="372" cy="320" r="14" fill="none" stroke="rgba(90,170,212,0.4)" stroke-width="1.5"/>
-  <circle cx="372" cy="320" r="6" fill="rgba(90,170,212,0.15)"/>
-</svg>
+      <!-- animated spinning groups -->
+      <style>.geo-spin{animation:geospin 22s linear infinite;transform-origin:210px 280px}.geo-spin-r{animation:geospin 16s linear infinite reverse;transform-origin:210px 280px}@keyframes geospin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}</style>
+      <g class="geo-spin">
+        <circle cx="210" cy="82" r="5" fill="#5aaad4" opacity="0.55"/>
+        <circle cx="358" cy="335" r="4" fill="#3a8ab4" opacity="0.45"/>
+        <circle cx="62" cy="225" r="4" fill="#3a8ab4" opacity="0.45"/>
+      </g>
+      <g class="geo-spin-r">
+        <rect x="199" y="54" width="22" height="22" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.38"/>
+        <rect x="348" y="352" width="20" height="20" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.35"/>
+        <rect x="52" y="170" width="20" height="20" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.35"/>
+      </g>
+    </svg>
   </div>
 
   <div class="hero-text reveal">
@@ -637,7 +614,7 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
     <p class="csub">Open to hybrid-friendly roles in strategy, operations, or consulting in Korea or Japan. If you're building something that needs someone who can both run the analysis and sit in the room let's talk.</p>
   </div>
   <div class="clinks reveal">
-    <a class="cl" href="mailto:laribimaryam0000@gmail.com"><span>laribimaryam0000@gmail.com</span><span class="ca">→</span></a>
+    <a class="cl" href="/cdn-cgi/l/email-protection#a1cdc0d3c8c3c8ccc0d3d8c0cc91919191e1c6ccc0c8cd8fc2cecc"><span><span class="__cf_email__" data-cfemail="d8b4b9aab1bab1b5b9aaa1b9b5e8e8e8e898bfb5b9b1b4f6bbb7b5">[email&#160;protected]</span></span><span class="ca">→</span></a>
     <a class="cl" href="https://linkedin.com/in/maryam-laribi-7957541b8" target="_blank"><span>LinkedIn</span><span class="ca">→</span></a>
     <a class="cl" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank"><span>GitHub</span><span class="ca">→</span></a>
   </div>
@@ -648,7 +625,7 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
   <span>STRATEGY & ANALYTICS</span>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const facts=['Three continents, one consistent output','Built dashboards leadership actually uses','GPA 4.3 out of 4.5','Four languages, zero Google Translate','Business Japanese from a semester in Osaka','Found 15–25% profit opportunities','9 countries, 12 years of data, one thesis','Six robustness tests. Findings held.'];
 let fi=0;
 function cycleFact(){
@@ -660,8 +637,4 @@ function cycleFact(){
 document.getElementById('tt').style.transition='opacity 0.14s';
 const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target)}})},{threshold:0.05});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-const sobs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skbar').forEach(b=>{b.style.width=b.dataset.w+'%'});sobs.unobserve(e.target)}})},{threshold:0.2});
-document.querySelectorAll('.skl,.skr').forEach(el=>sobs.observe(el));
-</script>
-</body>
-</html>
+const sobs=new IntersectionObserver(entries=>{entries
