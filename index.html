@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Maryam Laribi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#a8d8f0;--blue2:#c8eaf8;--blue3:#e4f4fc;--blue4:#5aaad4;--black:#0e0e0e;--gray:#6a7a84;--light:#f6f8fa;--white:#fff}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:58px;background:rgba(255,255,255,0.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,0.07)}
+.nav-logo{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;letter-spacing:0.05em;text-decoration:none;color:var(--black)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--gray);text-decoration:none;transition:color .15s}
+.nav-links a:hover{color:var(--black)}
+.nav-cta{font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;background:var(--black);color:var(--white);text-decoration:none;transition:all .15s}
+.nav-cta:hover{background:var(--blue4)}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3cc870;margin-right:7px;animation:livepulse 2s ease-in-out infinite}
+@keyframes livepulse{0%,100%{box-shadow:0 0 0 0 rgba(60,200,112,0.4)}70%{box-shadow:0 0 0 6px rgba(60,200,112,0)}}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:480px 1fr;padding-top:58px;border-bottom:1.5px solid var(--black)}
+.hero-photo{position:relative;overflow:hidden;background:var(--blue3);border-right:1.5px solid var(--black);display:flex;align-items:flex-end;justify-content:center}
+.hero-bg-circle{position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:480px;height:480px;border-radius:50%;background:var(--blue2);z-index:0}
+.portrait-svg{position:relative;z-index:1;width:100%;max-width:420px}
+.chip{position:absolute;z-index:10;background:var(--white);border:1.5px solid var(--black);border-radius:10px;padding:9px 14px;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.04em;line-height:1.4;box-shadow:3px 3px 0 var(--black)}
+.c1{top:90px;left:22px}.c2{top:112px;right:18px}.c3{bottom:110px;left:18px}
+
+.hero-text{padding:72px 56px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-deco{position:absolute;right:-20px;bottom:-40px;font-size:300px;font-weight:700;line-height:1;color:rgba(0,0,0,0.03);user-select:none;letter-spacing:-0.06em}
+.kicker{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:'';display:block;width:28px;height:1.5px;background:var(--black)}
+.hero-name{font-size:clamp(52px,7vw,86px);font-weight:700;letter-spacing:-0.04em;line-height:0.92;margin-bottom:6px;position:relative;z-index:1}
+.name-hl{background:var(--blue2);padding:0 6px;margin-left:-6px;border-radius:4px}
+.hero-role{font-size:15px;font-weight:400;color:var(--gray);margin-bottom:28px;letter-spacing:-0.01em;position:relative;z-index:1}
+.hero-desc{font-size:15.5px;line-height:1.72;color:var(--gray);max-width:400px;margin-bottom:32px;position:relative;z-index:1}
+.hero-desc strong{color:var(--black);font-weight:600}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:32px;position:relative;z-index:1}
+.tag{font-size:11px;font-weight:700;padding:6px 14px;border-radius:100px;border:1.5px solid var(--black);letter-spacing:0.02em;transition:all .15s;cursor:default}
+.tag:hover{background:var(--black);color:var(--white)}
+.tag.f{background:var(--blue);border-color:var(--blue);color:#1a3a50}
+.tag.f:hover{background:var(--blue4);border-color:var(--blue4);color:var(--white)}
+.btns{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+.btn{font-size:13px;font-weight:700;padding:12px 24px;border-radius:100px;text-decoration:none;border:1.5px solid transparent;transition:all .18s;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.01em}
+.btn-s{background:var(--black);color:var(--white);border-color:var(--black)}
+.btn-s:hover{background:var(--blue4);border-color:var(--blue4);transform:translateY(-1px)}
+.btn-g{border-color:rgba(0,0,0,0.18);color:var(--gray)}
+.btn-g:hover{border-color:var(--black);color:var(--black)}
+.ticker{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(0,0,0,0.1);border-radius:8px;padding:9px 16px;margin-top:18px;cursor:pointer;transition:all .15s;position:relative;z-index:1;background:var(--light)}
+.ticker:hover{border-color:var(--black);background:var(--white)}
+.tlabel{font-family:'Space Mono',monospace;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray)}
+.tdiv{width:1px;height:14px;background:rgba(0,0,0,0.12)}
+.ttext{font-size:13px;font-weight:600;color:var(--black);transition:opacity .14s}
+.tarr{font-size:13px;color:var(--gray)}
+
+/* STRIP */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1.5px solid var(--black)}
+.sc{padding:26px 32px;border-right:1.5px solid var(--black);transition:background .15s;cursor:default}
+.sc:last-child{border-right:none}
+.sc:hover{background:var(--blue3)}
+.sn{font-size:40px;font-weight:700;letter-spacing:-0.04em;line-height:1;color:var(--black)}
+.sn sub{font-size:17px;font-weight:400;color:var(--gray);vertical-align:baseline}
+.sl{font-size:12px;font-weight:500;color:var(--gray);margin-top:4px}
+
+/* WHATIF */
+.whatif{background:var(--blue);padding:72px 52px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;border-bottom:1.5px solid var(--black)}
+.wi-big{font-size:clamp(52px,9vw,108px);font-weight:700;letter-spacing:-0.05em;line-height:0.88;color:var(--black)}
+.wi-body{font-size:16px;color:var(--black);line-height:1.72;opacity:0.72;max-width:380px}
+.wi-body strong{opacity:1}
+
+/* EXP */
+.exps{padding:80px 52px;border-bottom:1.5px solid var(--black)}
+.sk{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gray);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sk::before{content:'';display:block;width:24px;height:1.5px;background:var(--black)}
+.stitle{font-size:clamp(32px,5vw,52px);font-weight:700;letter-spacing:-0.03em;line-height:0.96;margin-bottom:48px;color:var(--black)}
+.exp-list{display:flex;flex-direction:column}
+.er{display:grid;grid-template-columns:56px 1fr 180px;padding:28px 0;border-top:1px solid rgba(0,0,0,0.08);gap:20px;align-items:start}
+.er:last-child{border-bottom:1px solid rgba(0,0,0,0.08)}
+.en{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--blue4);padding-top:4px}
+.erole{font-size:19px;font-weight:700;letter-spacing:-0.02em;margin-bottom:4px}
+.eco{font-size:13px;color:var(--gray);margin-bottom:13px}
+.ebulls{list-style:none;display:flex;flex-direction:column;gap:5px}
+.ebulls li{font-size:13.5px;color:var(--gray);padding-left:16px;position:relative;line-height:1.55}
+.ebulls li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--blue4)}
+.ebadge{font-family:'Space Mono',monospace;font-size:10px;border:1px solid rgba(0,0,0,0.15);border-radius:6px;padding:7px 12px;color:var(--gray);text-align:center;line-height:1.5;align-self:start}
+
+/* THESIS */
+.thesis{padding:80px 52px;background:var(--light);border-bottom:1.5px solid var(--black)}
+.thesis-in{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.tc{border-radius:14px;overflow:hidden;border:1.5px solid rgba(0,0,0,0.1)}
+.ttitle{font-size:26px;font-weight:700;letter-spacing:-0.02em;line-height:1.18;margin-bottom:14px}
+.tdesc{font-size:14px;color:var(--gray);line-height:1.72;margin-bottom:20px}
+.tpills{display:flex;gap:7px;flex-wrap:wrap}
+.tp{font-size:11px;font-weight:700;padding:5px 13px;border:1.5px solid var(--black);border-radius:100px;letter-spacing:0.02em}
+.tp.f{background:var(--blue);border-color:var(--blue);color:#1a3a50}
+
+/* PROJECTS */
+.ph{padding:48px 52px 0;border-top:1.5px solid var(--black)}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--black);border-top:1.5px solid var(--black)}
+.pc-card{background:var(--white);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s}
+.pc-card:hover{background:var(--blue3)}
+.pthumb{height:190px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pbody{padding:22px 26px;border-top:1.5px solid var(--black);flex:1;display:flex;flex-direction:column}
+.pnum{font-family:'Space Mono',monospace;font-size:10px;color:var(--gray);letter-spacing:0.1em;margin-bottom:7px}
+.pname{font-size:19px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px}
+.pdesc{font-size:13px;color:var(--gray);line-height:1.55;flex:1;margin-bottom:12px}
+.pchips{display:flex;gap:6px;flex-wrap:wrap}
+.pch{font-size:10px;font-weight:700;padding:3px 10px;border:1px solid rgba(0,0,0,0.15);border-radius:100px;color:var(--gray);letter-spacing:0.04em}
+.parr{font-size:12px;font-weight:700;color:var(--gray);margin-top:10px}
+.pc-card:hover .parr{color:var(--black)}
+
+/* PROCESS */
+.proc{border-top:1.5px solid var(--black)}
+.proc-h{padding:56px 52px 0;display:flex;align-items:baseline;gap:24px}
+.proc-wm{font-size:clamp(80px,14vw,160px);font-weight:700;letter-spacing:-0.06em;line-height:0.88;color:rgba(0,0,0,0.05);user-select:none}
+.proc-hd{font-size:28px;font-weight:700;letter-spacing:-0.02em}
+.proc-cells{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--black);margin-top:40px}
+.prc{padding:32px;border-right:1.5px solid var(--black);transition:background .15s}
+.prc:last-child{border-right:none}
+.prc:hover{background:var(--blue3)}
+.prn{font-family:'Space Mono',monospace;font-size:11px;color:var(--blue4);margin-bottom:12px;font-weight:700}
+.prtitle{font-size:17px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
+.prbody{font-size:13px;color:var(--gray);line-height:1.62}
+.prtag{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;padding:4px 12px;background:var(--blue);border-radius:100px;color:#1a3a50}
+
+/* SKILLS */
+.skwrap{display:grid;grid-template-columns:1fr 1fr;border-top:1.5px solid var(--black)}
+.skl{padding:60px 52px;border-right:1.5px solid var(--black)}
+.skr{padding:60px 52px}
+.sklist{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.skrow{display:flex;flex-direction:column;gap:6px}
+.sklabel{font-size:13px;font-weight:600;display:flex;justify-content:space-between;letter-spacing:-0.01em}
+.sklabel span{font-family:'Space Mono',monospace;font-size:10px;color:var(--gray)}
+.sktrack{height:6px;background:rgba(0,0,0,0.07);border-radius:100px;overflow:hidden}
+.skbar{height:100%;border-radius:100px;background:var(--blue4);width:0;transition:width 1.3s cubic-bezier(0.34,1.56,0.64,1)}
+.techs{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.tech{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;padding:7px 14px;border:1.5px solid var(--black);border-radius:6px;letter-spacing:0.04em;transition:all .15s;cursor:default}
+.tech:hover{background:var(--blue);border-color:var(--blue)}
+
+/* WORLD */
+.world{background:var(--black);padding:80px 52px;border-top:1.5px solid var(--black)}
+.world .sk{color:rgba(255,255,255,0.3)}
+.world .sk::before{background:rgba(255,255,255,0.2)}
+.world .stitle{color:var(--white)}
+.wmap{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);margin-bottom:20px}
+.locs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07)}
+.loc{background:var(--black);padding:20px 24px;transition:background .15s}
+.loc:hover{background:rgba(168,216,240,0.06)}
+.lfl{font-size:20px;margin-bottom:7px}
+.lcy{font-size:15px;font-weight:700;color:var(--white);letter-spacing:-0.01em;margin-bottom:2px}
+.ldt{font-size:12px;color:rgba(255,255,255,0.38)}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;background:var(--blue2);border-top:1.5px solid var(--black);padding:100px 52px;gap:60px;align-items:center}
+.cbig{font-size:clamp(46px,7vw,86px);font-weight:700;letter-spacing:-0.04em;line-height:0.92;margin-bottom:20px}
+.csub{font-size:15px;color:var(--black);line-height:1.68;max-width:360px;opacity:0.7}
+.clinks{display:flex;flex-direction:column;gap:12px}
+.cl{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:var(--white);border:1.5px solid var(--black);border-radius:12px;text-decoration:none;color:var(--black);font-size:14px;font-weight:600;letter-spacing:-0.01em;transition:all .18s}
+.cl:hover{background:var(--black);color:var(--white);transform:translateX(4px)}
+.ca{transition:transform .18s}
+.cl:hover .ca{transform:translateX(4px)}
+footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justify-content:space-between;align-items:center;font-family:'Space Mono',monospace;font-size:10px;color:var(--gray);letter-spacing:0.06em}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .hero-photo{height:60vw;min-height:280px}
+  .strip{grid-template-columns:1fr 1fr}
+  .whatif,.thesis-in,.skwrap,.contact{grid-template-columns:1fr}
+  .pg{grid-template-columns:1fr}
+  .proc-cells{grid-template-columns:1fr}
+  .er{grid-template-columns:40px 1fr}
+  .ebadge{display:none}
+  nav{padding:0 20px}
+  .exps,.thesis,.ph,.proc-h,.skl,.skr,.world,.contact{padding-left:20px;padding-right:20px}
+  .whatif{padding:52px 20px}
+  footer{padding:18px 20px}
+  .locs{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#"><span class="live-dot"></span>MARYAM LARIBI</a>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+  </div>
+  <a class="nav-cta" href="#contact">Get in touch</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-photo">
+    <div class="hero-bg-circle"></div>
+    <div class="chip c1">GPA 4.3 / 4.5<br>Korea University</div>
+    <div class="chip c2">Available · Seoul 🇰🇷</div>
+    <div class="chip c3">EN · AR · FR · JA</div>
+
+    <!-- PORTRAIT: female, long dark wavy hair, brown eyes, black blazer, white shirt -->
+    <svg class="portrait-svg" viewBox="0 0 420 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="210" cy="560" r="260" fill="#b8dff0" opacity="0.45"/>
+
+  <!-- ── HAIR BACK LAYER - drawn first so it sits behind everything ── -->
+  <!-- Wide back mass of hair falling from top of head all the way down -->
+  <path d="M118 155 C100 165 82 195 74 240 C66 285 68 350 72 420 C76 490 86 540 98 590 L140 585 C128 535 118 482 114 420 C110 355 110 290 116 240 C120 208 124 182 130 168 Z" fill="#7a4828"/>
+  <path d="M302 155 C320 165 338 195 346 240 C354 285 352 350 348 420 C344 490 334 540 322 590 L280 585 C292 535 302 482 306 420 C310 355 310 290 304 240 C300 208 296 182 290 168 Z" fill="#7a4828"/>
+  <!-- Center back panel - fills gap between the two sides -->
+  <path d="M130 168 C150 155 175 148 210 148 C245 148 270 155 290 168 L295 220 L298 320 L295 430 L288 540 L280 585 L140 585 L132 540 L125 430 L122 320 L125 220 Z" fill="#7a4828"/>
+
+  <!-- Straight hair texture lines on back -->
+  <line x1="150" y1="580" x2="148" y2="300" stroke="#8a5530" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <line x1="170" y1="585" x2="168" y2="280" stroke="#8a5530" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  <line x1="210" y1="586" x2="210" y2="270" stroke="#8a5530" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  <line x1="250" y1="585" x2="252" y2="280" stroke="#8a5530" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  <line x1="270" y1="580" x2="272" y2="300" stroke="#8a5530" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- ── BLAZER BODY ── -->
+  <path d="M55 640 L55 468 C55 438 84 408 124 396 L170 380 L210 438 L250 380 L296 396 C336 408 365 438 365 468 L365 640Z" fill="#111"/>
+  <path d="M170 380 L210 438 L172 492 L124 396Z" fill="#1c1c1c"/>
+  <path d="M250 380 L210 438 L248 492 L296 396Z" fill="#1c1c1c"/>
+  <path d="M195 380 L210 406 L225 380 L218 370 L202 370Z" fill="#f4f0ec"/>
+  <rect x="208" y="404" width="4" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
+  <rect x="208" y="416" width="4" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
+  <path d="M55 438 L124 396" stroke="#222" stroke-width="1" opacity="0.5"/>
+  <path d="M365 438 L296 396" stroke="#222" stroke-width="1" opacity="0.5"/>
+  <path d="M86 472 L86 494 L128 494 L128 472" stroke="#2a2a2a" stroke-width="1.2" fill="none"/>
+
+  <!-- Hair over shoulders - front side panels falling over blazer -->
+  <path d="M80 240 L76 310 L80 400 L96 450 L124 420 L122 360 L118 280 L110 218Z" fill="#7a4828"/>
+  <path d="M340 240 L344 310 L340 400 L324 450 L296 420 L298 360 L302 280 L310 218Z" fill="#7a4828"/>
+
+  <!-- ── NECK ── -->
+  <path d="M183 316 C182 358 180 374 178 380 L210 393 L242 380 C240 374 238 358 237 316Z" fill="#f2d4b0"/>
+
+  <!-- ── HEAD ── -->
+  <ellipse cx="210" cy="258" rx="90" ry="102" fill="#f2d4b0"/>
+
+  <!-- ── EARS ── -->
+  <ellipse cx="121" cy="268" rx="16" ry="21" fill="#eccc9e"/>
+  <ellipse cx="299" cy="268" rx="16" ry="21" fill="#eccc9e"/>
+  <ellipse cx="121" cy="268" rx="9" ry="13" fill="#dab888" opacity="0.4"/>
+  <ellipse cx="299" cy="268" rx="9" ry="13" fill="#dab888" opacity="0.4"/>
+  <circle cx="121" cy="283" r="4" fill="#c8a040"/>
+  <circle cx="121" cy="283" r="2.5" fill="#e8c060"/>
+
+  <!-- ── HAIR TOP - cap over head ── -->
+  <ellipse cx="210" cy="155" rx="93" ry="68" fill="#7a4828"/>
+  <!-- Straight fringe / top hair flat across forehead -->
+  <path d="M122 168 L122 196 L298 196 L298 168 C278 146 244 138 210 138 C176 138 142 146 122 168Z" fill="#7a4828"/>
+  <!-- fringe bottom edge -->
+  <line x1="124" y1="195" x2="296" y2="195" stroke="#5a3015" stroke-width="1.5" opacity="0.35"/>
+  <!-- center part -->
+  <line x1="210" y1="130" x2="210" y2="196" stroke="#5a3015" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+  <!-- hair highlight -->
+  <path d="M185 132 L185 172" stroke="rgba(255,255,255,0.09)" stroke-width="14" stroke-linecap="round" fill="none"/>
+
+  <!-- ── EYEBROWS ── -->
+  <path d="M150 216 C161 207 179 205 193 210" stroke="#3a2010" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M227 210 C241 205 259 207 270 216" stroke="#3a2010" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- ── EYES ── -->
+  <ellipse cx="171" cy="236" rx="21" ry="14" fill="white"/>
+  <ellipse cx="249" cy="236" rx="21" ry="14" fill="white"/>
+  <circle cx="171" cy="236" r="11" fill="#6a3c18"/>
+  <circle cx="249" cy="236" r="11" fill="#6a3c18"/>
+  <circle cx="171" cy="236" r="6" fill="#0e0602"/>
+  <circle cx="249" cy="236" r="6" fill="#0e0602"/>
+  <circle cx="176" cy="230" r="3.2" fill="rgba(255,255,255,0.82)"/>
+  <circle cx="254" cy="230" r="3.2" fill="rgba(255,255,255,0.82)"/>
+  <circle cx="167" cy="240" r="1.4" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="245" cy="240" r="1.4" fill="rgba(255,255,255,0.3)"/>
+  <path d="M150 228 C159 219 183 219 192 228" stroke="#0e0602" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M228 228 C237 219 261 219 270 228" stroke="#0e0602" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M151 244 C161 250 181 250 191 244" stroke="#6a3c18" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <path d="M229 244 C239 250 259 250 269 244" stroke="#6a3c18" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- ── NOSE ── -->
+  <path d="M202 256 C204 267 208 276 210 278" stroke="#c09a72" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M218 256 C216 267 212 276 210 278" stroke="#c09a72" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M195 279 C202 284 218 284 225 279" stroke="#c09a72" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- ── LIPS ── -->
+  <path d="M183 301 C192 293 202 291 210 291 C218 291 228 293 237 301 C228 310 218 315 210 315 C202 315 192 310 183 301Z" fill="#dd9e8a"/>
+  <path d="M183 301 C192 294 202 291 210 291 C218 291 228 294 237 301" fill="#e8aaa0"/>
+  <path d="M193 301 C200 296 206 293 210 291 C214 293 220 296 227 301" fill="#e8b0a8" opacity="0.6"/>
+  <path d="M200 304 C205 300 215 300 220 304" stroke="rgba(255,255,255,0.22)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- ── BLUSH ── -->
+  <ellipse cx="142" cy="274" rx="24" ry="15" fill="rgba(220,160,140,0.09)"/>
+  <ellipse cx="278" cy="274" rx="24" ry="15" fill="rgba(220,160,140,0.09)"/>
+
+  <!-- deco circles -->
+  <circle cx="50" cy="160" r="18" fill="none" stroke="rgba(90,170,212,0.5)" stroke-width="2"/>
+  <circle cx="50" cy="160" r="8" fill="rgba(90,170,212,0.2)"/>
+  <circle cx="372" cy="320" r="14" fill="none" stroke="rgba(90,170,212,0.4)" stroke-width="1.5"/>
+  <circle cx="372" cy="320" r="6" fill="rgba(90,170,212,0.15)"/>
+</svg>
+  </div>
+
+  <div class="hero-text reveal">
+    <div class="hero-deco">ML</div>
+    <div class="kicker">Strategy · Analytics · Operations</div>
+    <div class="hero-name">Mary<span class="name-hl">am</span><br>Laribi.</div>
+    <div class="hero-role">MSc Candidate · Korea University · Seoul</div>
+    <p class="hero-desc">I turn messy data into decisions people actually make. Spent two years doing that at an olive oil company in Morocco built the dashboards, ran the numbers, sat in the room when it mattered. Now finishing my MSc in Seoul, and ready for what's next.</p>
+    <div class="tags">
+      <span class="tag f">Supply Chain</span>
+      <span class="tag f">Strategy</span>
+      <span class="tag f">Analytics</span>
+      <span class="tag">Executive Ops</span>
+      <span class="tag">Quant Research</span>
+      <span class="tag">Business Japanese</span>
+    </div>
+    <div class="btns">
+      <a class="btn btn-s" href="#contact">Get in touch</a>
+      <a class="btn btn-g" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank">GitHub →</a>
+    </div>
+    <div class="ticker" onclick="cycleFact()">
+      <span class="tlabel">Quick fact</span>
+      <div class="tdiv"></div>
+      <span class="ttext" id="tt">Operated across 3 continents</span>
+      <span class="tarr">↻</span>
+    </div>
+  </div>
+</div>
+
+<div class="strip reveal">
+  <div class="sc"><div class="sn">4.3<sub>/4.5</sub></div><div class="sl">MSc GPA · Korea University</div></div>
+  <div class="sc"><div class="sn">9<sub> countries</sub></div><div class="sl">Countries in my thesis</div></div>
+  <div class="sc"><div class="sn">2+<sub> yrs</sub></div><div class="sl">Years of real work</div></div>
+  <div class="sc"><div class="sn">4<sub> langs</sub></div><div class="sl">Languages, zero Google Translate</div></div>
+</div>
+
+<div class="whatif reveal">
+  <div class="wi-big">What if<br>data<br>could<br>decide?</div>
+  <p class="wi-body">Most analytics stops at the dashboard. I go further - translating quantitative signals into strategic moves leadership can act on. From olive oil margins in Morocco to Korea–ASEAN geopolitical alignment, the throughline is the same: <strong>rigorous method, clear story, real outcome.</strong></p>
+</div>
+
+<div class="exps" id="experience">
+  <div class="sk reveal">Experience</div>
+  <div class="stitle reveal">Where I've<br>done the work.</div>
+  <div class="exp-list">
+    <div class="er reveal">
+      <div class="en">01</div>
+      <div>
+        <div class="erole">Strategy & Analytics Analyst</div>
+        <div class="eco">Les Huileries de Meknès - Agouzzal Group · Morocco</div>
+        <ul class="ebulls">
+          <li>Identified 15–25% profitability improvement through cost structure and margin diagnostics - presented to senior management, directly shaping pricing and resource strategy</li>
+          <li>Built forecasting models and KPI dashboards that senior management adopted for strategic planning. They're still using them.</li>
+          <li>Ran supplier performance analysis that reduced cost exposure across key input categories.</li>
+          <li>Navigated ops, finance, and management across three languages Arabic, French, English in a fast-moving environment.</li>
+        </ul>
+      </div>
+      <div class="ebadge">Jul 2022<br>-<br>May 2024</div>
+    </div>
+    <div class="er reveal">
+      <div class="en">02</div>
+      <div>
+        <div class="erole">MSc - Logistics, Services & Operations Management</div>
+        <div class="eco">Korea University · Seoul · GPA 4.3/4.5</div>
+        <ul class="ebulls">
+          <li>GPA 4.3/4.5. Coursework in Quantitative Modeling, Supply Chain Optimization, Decision Analytics, and Financial Performance Measurement.</li>
+          <li>Thesis: built a four-layer institutional embeddedness index from scratch and ran panel regression across 9 countries to test whether supply chain ties predict political alignment.</li>
+          <li>Six robustness tests later the findings held.</li>
+        </ul>
+      </div>
+      <div class="ebadge">Sep 2024<br>-<br>Jun 2026</div>
+    </div>
+    <div class="er reveal">
+      <div class="en">03</div>
+      <div>
+        <div class="erole">BBA - Business Administration, Summa Cum Laude</div>
+        <div class="eco">Al Akhawayn University, Morocco · Exchange: Kansai Gaidai University, Osaka</div>
+        <ul class="ebulls">
+          <li>Graduated summa cum laude. Did an exchange semester at Kansai Gaidai University in Osaka left with business Japanese and a genuine love for how seriously Japan takes craft.</li>
+        </ul>
+      </div>
+      <div class="ebadge">Sep 2017<br>-<br>Jan 2022</div>
+    </div>
+  </div>
+</div>
+
+<div class="thesis">
+  <div class="sk reveal">Research</div>
+  <div class="thesis-in reveal">
+    <div class="tc">
+      <svg width="100%" viewBox="0 0 480 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="480" height="300" fill="#e8f4fc"/>
+        <line x1="44" y1="260" x2="440" y2="260" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+        <line x1="44" y1="200" x2="440" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+        <line x1="44" y1="140" x2="440" y2="140" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+        <line x1="44" y1="80" x2="440" y2="80" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+        <path d="M60 230 L120 205 L180 196 L240 168 L300 150 L360 126 L420 105" stroke="#5aaad4" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M60 245 L120 232 L180 222 L240 208 L300 194 L360 178 L420 164" stroke="#a8d8f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M60 238 L120 218 L180 208 L240 188 L300 170 L360 150 L420 135" stroke="#3a8ab4" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+        <circle cx="60" cy="230" r="5" fill="#5aaad4" stroke="white" stroke-width="1.5"/>
+        <circle cx="240" cy="168" r="5" fill="#5aaad4" stroke="white" stroke-width="1.5"/>
+        <circle cx="420" cy="105" r="5" fill="#5aaad4" stroke="white" stroke-width="1.5"/>
+        <text x="48" y="278" font-size="9" fill="rgba(0,0,0,0.3)" font-family="monospace">2012</text>
+        <text x="228" y="278" font-size="9" fill="rgba(0,0,0,0.3)" font-family="monospace">2017</text>
+        <text x="408" y="278" font-size="9" fill="rgba(0,0,0,0.3)" font-family="monospace">2023</text>
+        <rect x="296" y="30" width="132" height="20" rx="4" fill="rgba(90,170,212,0.15)"/>
+        <text x="362" y="44" font-size="9" fill="#3a7a9a" font-family="monospace" font-weight="700" text-anchor="middle">DepthIndex L2+L4 ↑</text>
+        <text x="240" y="175" font-size="60" fill="rgba(90,170,212,0.07)" font-family="sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-2">ASEAN</text>
+      </svg>
+    </div>
+    <div>
+      <div class="ttitle">Supply Chain Embeddedness and Political Alignment: Evidence from Korea–ASEAN Institutional Cooperation</div>
+      <p class="tdesc">Quantitative study examining whether deepening bilateral institutional embeddedness in supply chain partnerships precedes broader geopolitical alignment. Custom four-layer depth index across 9 ASEAN countries, 2012–2023. Dyadic panel regression, first-difference methodology, six robustness tests.</p>
+      <div class="tpills">
+        <span class="tp f">Panel Regression</span>
+        <span class="tp f">9 countries · 12 yrs</span>
+        <span class="tp">Python · R</span>
+        <span class="tp">First-difference</span>
+        <span class="tp">6 robustness tests</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="work">
+  <div class="ph reveal">
+    <div class="sk">Work</div>
+    <div class="stitle" style="margin-bottom:28px">Selected projects.</div>
+  </div>
+  <div class="pg">
+    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics/Analytics-Portfolio/blob/main/Forecasting_Model.ipynb" target="_blank">
+      <div class="pthumb" style="background:#daeeff">
+        <svg width="380" height="190" viewBox="0 0 380 190" fill="none">
+          <rect width="380" height="190" fill="#daeeff"/>
+          <path d="M40 125 L90 104 L140 115 L190 80 L240 91 L290 56 L330 44 L330 150 L40 150Z" fill="rgba(90,170,212,0.1)"/>
+          <path d="M40 125 L90 104 L140 115 L190 80 L240 91 L290 56 L330 44" stroke="#5aaad4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M330 44 L368 28" stroke="#1a3a5a" stroke-width="2.5" stroke-dasharray="5 4" stroke-linecap="round" fill="none"/>
+          <circle cx="90" cy="104" r="5" fill="#5aaad4" stroke="white" stroke-width="2"/>
+          <circle cx="190" cy="80" r="5" fill="#5aaad4" stroke="white" stroke-width="2"/>
+          <circle cx="290" cy="56" r="5" fill="#5aaad4" stroke="white" stroke-width="2"/>
+          <circle cx="366" cy="27" r="5" fill="#1a3a5a" stroke="white" stroke-width="2"/>
+          <rect x="262" y="20" width="86" height="18" rx="4" fill="rgba(26,58,90,0.1)"/>
+          <text x="305" y="33" font-size="9" fill="#1a3a5a" font-family="monospace" font-weight="700" text-anchor="middle">FORECAST ↗</text>
+          <line x1="40" y1="150" x2="340" y2="150" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="pbody">
+        <div class="pnum">01 - Python · Time Series</div>
+        <div class="pname">Demand Forecasting Model</div>
+        <p class="pdesc">Forecasting model built to predict demand patterns and inform inventory and procurement decisions. The kind of thing that saves money quietly.</p>
+        <div class="pchips"><span class="pch">Python</span><span class="pch">Pandas</span><span class="pch">Time Series</span></div>
+        <div class="parr">View on GitHub →</div>
+      </div>
+    </a>
+    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank">
+      <div class="pthumb" style="background:#eae4ff">
+        <svg width="380" height="190" viewBox="0 0 380 190" fill="none">
+          <rect width="380" height="190" fill="#eae4ff"/>
+          <circle cx="190" cy="95" r="30" fill="#7a4ec8" opacity="0.85"/>
+          <text x="190" y="100" font-size="12" fill="white" font-family="monospace" font-weight="700" text-anchor="middle">KOREA</text>
+          <line x1="190" y1="95" x2="80" y2="38" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <line x1="190" y1="95" x2="300" y2="38" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <line x1="190" y1="95" x2="58" y2="130" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <line x1="190" y1="95" x2="322" y2="130" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <line x1="190" y1="95" x2="112" y2="168" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <line x1="190" y1="95" x2="268" y2="168" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <line x1="190" y1="95" x2="190" y2="22" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <line x1="190" y1="95" x2="340" y2="82" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <line x1="190" y1="95" x2="40" y2="82" stroke="rgba(122,78,200,0.25)" stroke-width="1.5"/>
+          <circle cx="80" cy="38" r="18" fill="#9468d4" opacity="0.75"/><text x="80" y="43" font-size="8" fill="white" font-family="monospace" text-anchor="middle">VN</text>
+          <circle cx="300" cy="38" r="18" fill="#9468d4" opacity="0.75"/><text x="300" y="43" font-size="8" fill="white" font-family="monospace" text-anchor="middle">MY</text>
+          <circle cx="58" cy="130" r="18" fill="#9468d4" opacity="0.75"/><text x="58" y="135" font-size="8" fill="white" font-family="monospace" text-anchor="middle">TH</text>
+          <circle cx="322" cy="130" r="18" fill="#9468d4" opacity="0.75"/><text x="322" y="135" font-size="8" fill="white" font-family="monospace" text-anchor="middle">ID</text>
+          <circle cx="112" cy="168" r="15" fill="#b88ef8" opacity="0.8"/><text x="112" y="173" font-size="8" fill="white" font-family="monospace" text-anchor="middle">PH</text>
+          <circle cx="268" cy="168" r="15" fill="#b88ef8" opacity="0.8"/><text x="268" y="173" font-size="8" fill="white" font-family="monospace" text-anchor="middle">SG</text>
+          <circle cx="190" cy="22" r="13" fill="#b88ef8" opacity="0.8"/><text x="190" y="27" font-size="8" fill="white" font-family="monospace" text-anchor="middle">MM</text>
+          <circle cx="340" cy="82" r="13" fill="#b88ef8" opacity="0.8"/><text x="340" y="87" font-size="8" fill="white" font-family="monospace" text-anchor="middle">LA</text>
+          <circle cx="40" cy="82" r="13" fill="#b88ef8" opacity="0.8"/><text x="40" y="87" font-size="8" fill="white" font-family="monospace" text-anchor="middle">KH</text>
+        </svg>
+      </div>
+      <div class="pbody">
+        <div class="pnum">02 - R · Index Design</div>
+        <div class="pname">Institutional Embeddedness Index</div>
+        <p class="pdesc">Custom four-layer index: FTA depth, joint committees, AEO mutual recognition, state-linked production across 9 ASEAN countries, 2012–2023.</p>
+        <div class="pchips"><span class="pch">R</span><span class="pch">Panel Data</span><span class="pch">ASEAN</span></div>
+        <div class="parr">View on GitHub →</div>
+      </div>
+    </a>
+    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank">
+      <div class="pthumb" style="background:#ccf4e0">
+        <svg width="380" height="190" viewBox="0 0 380 190" fill="none">
+          <rect width="380" height="190" fill="#ccf4e0"/>
+          <rect x="20" y="16" width="96" height="54" rx="7" fill="white" opacity="0.85"/>
+          <text x="68" y="40" font-size="17" fill="#1a6a40" font-family="monospace" font-weight="800" text-anchor="middle">+22%</text>
+          <text x="68" y="58" font-size="8" fill="rgba(26,106,64,0.5)" font-family="monospace" text-anchor="middle">MARGIN GAIN</text>
+          <rect x="126" y="16" width="96" height="54" rx="7" fill="white" opacity="0.85"/>
+          <text x="174" y="40" font-size="17" fill="#1a6a40" font-family="monospace" font-weight="800" text-anchor="middle">↓18%</text>
+          <text x="174" y="58" font-size="8" fill="rgba(26,106,64,0.5)" font-family="monospace" text-anchor="middle">COST EXPO.</text>
+          <rect x="232" y="16" width="128" height="54" rx="7" fill="white" opacity="0.85"/>
+          <text x="296" y="40" font-size="17" fill="#1a6a40" font-family="monospace" font-weight="800" text-anchor="middle">4.3 / 5</text>
+          <text x="296" y="58" font-size="8" fill="rgba(26,106,64,0.5)" font-family="monospace" text-anchor="middle">SUPPLIER SCORE</text>
+          <rect x="20" y="82" width="156" height="96" rx="7" fill="white" opacity="0.85"/>
+          <rect x="36" y="154" width="14" height="14" rx="2" fill="#2ab870" opacity="0.6"/>
+          <rect x="56" y="138" width="14" height="30" rx="2" fill="#2ab870" opacity="0.75"/>
+          <rect x="76" y="124" width="14" height="44" rx="2" fill="#2ab870" opacity="0.9"/>
+          <rect x="96" y="132" width="14" height="36" rx="2" fill="#2ab870" opacity="0.75"/>
+          <rect x="116" y="118" width="14" height="50" rx="2" fill="#2ab870" opacity="0.85"/>
+          <circle cx="272" cy="130" r="36" fill="none" stroke="rgba(42,184,112,0.1)" stroke-width="18"/>
+          <circle cx="272" cy="130" r="36" fill="none" stroke="#2ab870" stroke-width="18" stroke-dasharray="158 68" stroke-dashoffset="44" stroke-linecap="round"/>
+          <rect x="186" y="82" width="174" height="96" rx="7" fill="white" opacity="0.85"/>
+          <text x="272" y="135" font-size="17" fill="#1a6a40" font-family="monospace" font-weight="800" text-anchor="middle">70%</text>
+          <text x="272" y="155" font-size="8" fill="rgba(26,106,64,0.4)" font-family="monospace" text-anchor="middle">EFFICIENCY</text>
+        </svg>
+      </div>
+      <div class="pbody">
+        <div class="pnum">03 - Excel · Operations</div>
+        <div class="pname">KPI & Margin Diagnostics Dashboard</div>
+        <p class="pdesc">Executive dashboard tracking profitability, supplier performance, and operational KPIs. Built for senior leadership at an olive oil producer and actually used.</p>
+        <div class="pchips"><span class="pch">Excel</span><span class="pch">KPI Design</span><span class="pch">Operations</span></div>
+        <div class="parr">View on GitHub →</div>
+      </div>
+    </a>
+    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank">
+      <div class="pthumb" style="background:#fff0e0">
+        <svg width="380" height="190" viewBox="0 0 380 190" fill="none">
+          <rect width="380" height="190" fill="#fff0e0"/>
+          <line x1="40" y1="165" x2="340" y2="165" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+          <line x1="40" y1="165" x2="40" y2="18" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+          <path d="M40 152 L340 50" stroke="rgba(200,80,48,0.14)" stroke-width="22" stroke-linecap="round"/>
+          <line x1="40" y1="152" x2="340" y2="50" stroke="#c84a30" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+          <circle cx="55" cy="147" r="5" fill="#e07850" opacity="0.8"/>
+          <circle cx="88" cy="135" r="5" fill="#e07850" opacity="0.8"/>
+          <circle cx="122" cy="124" r="5" fill="#e07850" opacity="0.8"/>
+          <circle cx="155" cy="114" r="5" fill="#e07850" opacity="0.8"/>
+          <circle cx="188" cy="103" r="5" fill="#e07850" opacity="0.8"/>
+          <circle cx="222" cy="91" r="5" fill="#e07850" opacity="0.8"/>
+          <circle cx="256" cy="80" r="5" fill="#e07850" opacity="0.8"/>
+          <circle cx="288" cy="68" r="5" fill="#e07850" opacity="0.8"/>
+          <circle cx="322" cy="57" r="5" fill="#e07850" opacity="0.8"/>
+          <rect x="238" y="132" width="92" height="22" rx="5" fill="rgba(200,80,48,0.1)"/>
+          <text x="284" y="147" font-size="10" fill="#c84a30" font-family="monospace" font-weight="700" text-anchor="middle">R² = 0.84 ✓</text>
+          <text x="44" y="182" font-size="9" fill="rgba(0,0,0,0.25)" font-family="monospace">supply chain depth →</text>
+        </svg>
+      </div>
+      <div class="pbody">
+        <div class="pnum">04 - R · Econometrics</div>
+        <div class="pname">Robustness Testing Suite</div>
+        <p class="pdesc">Six robustness tests on the panel regression results clustered SEs, leave-one-out, random effects, placebo, and more. Results held across all of them.</p>
+        <div class="pchips"><span class="pch">R</span><span class="pch">Econometrics</span><span class="pch">Research</span></div>
+        <div class="parr">View on GitHub →</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="proc reveal">
+  <div class="proc-h">
+    <div class="proc-wm">HOW</div>
+    <div class="proc-hd">How I work.</div>
+  </div>
+  <div class="proc-cells">
+    <div class="prc"><div class="prn">01</div><div class="prtitle">Start with the data, not a hunch</div><p class="prbody">I come to the table with analysis, not assumptions. Margin diagnostics, regression, scenario modeling then strategy.</p><span class="prtag">Analytics first</span></div>
+    <div class="prc"><div class="prn">02</div><div class="prtitle">Build things that still work in six months</div><p class="prbody">Not a one-time deliverable. I build the dashboard that becomes how leadership tracks performance, the model that gets embedded in how the team thinks.</p><span class="prtag">Built to last</span></div>
+    <div class="prc"><div class="prn">03</div><div class="prtitle">Make the insight land</div><p class="prbody">Complex data, clear output. The analysis is only useful if the person across the table understands what to do with it.</p><span class="prtag">Clear communication</span></div>
+  </div>
+</div>
+
+<div class="skwrap" id="skills">
+  <div class="skl reveal">
+    <div class="sk">Skills</div>
+    <div class="stitle" style="font-size:clamp(28px,4vw,42px);margin-bottom:0">What I<br>bring to the table.</div>
+    <div class="sklist">
+      <div class="skrow"><div class="sklabel">Strategy & Exec Ops <span>Senior</span></div><div class="sktrack"><div class="skbar" data-w="92"></div></div></div>
+      <div class="skrow"><div class="sklabel">Forecasting & Analytics <span>Advanced</span></div><div class="sktrack"><div class="skbar" data-w="88"></div></div></div>
+      <div class="skrow"><div class="sklabel">Quantitative Research <span>Advanced</span></div><div class="sktrack"><div class="skbar" data-w="85"></div></div></div>
+      <div class="skrow"><div class="sklabel">Supply Chain Mgmt <span>Proficient</span></div><div class="sktrack"><div class="skbar" data-w="80"></div></div></div>
+      <div class="skrow"><div class="sklabel">Stakeholder Comms <span>Senior</span></div><div class="sktrack"><div class="skbar" data-w="90"></div></div></div>
+    </div>
+  </div>
+  <div class="skr reveal">
+    <div class="sk">Tools & Languages</div>
+    <div style="font-size:12px;font-weight:600;color:var(--gray);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;margin-top:8px">Technical</div>
+    <div class="techs">
+      <span class="tech">Python</span><span class="tech">R</span><span class="tech">SQL</span>
+      <span class="tech">Excel</span><span class="tech">Pandas</span><span class="tech">Panel Data</span>
+      <span class="tech">Econometrics</span><span class="tech">Data Viz</span>
+    </div>
+    <div style="font-size:12px;font-weight:600;color:var(--gray);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;margin-top:28px">Languages</div>
+    <div class="sklist">
+      <div class="skrow"><div class="sklabel">English <span>Fluent</span></div><div class="sktrack"><div class="skbar" data-w="98" style="background:#5aaad4"></div></div></div>
+      <div class="skrow"><div class="sklabel">Arabic <span>Native</span></div><div class="sktrack"><div class="skbar" data-w="100" style="background:#2ab870"></div></div></div>
+      <div class="skrow"><div class="sklabel">French <span>Fluent</span></div><div class="sktrack"><div class="skbar" data-w="96" style="background:#9468d4"></div></div></div>
+      <div class="skrow"><div class="sklabel">Japanese 🇯🇵 <span>Business professional</span></div><div class="sktrack"><div class="skbar" data-w="74" style="background:#c84a8a"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="world reveal">
+  <div class="sk">Global</div>
+  <div class="stitle" style="margin-bottom:24px">Three countries.<br>One consistent<br>output.</div>
+  <div class="wmap">
+    <svg width="100%" viewBox="0 0 880 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="880" height="300" fill="#101820"/>
+      <path d="M80 75 L158 66 L178 86 L188 124 L168 154 L138 164 L108 149 L88 124 L74 96Z" fill="rgba(168,216,240,0.1)" stroke="rgba(168,216,240,0.18)" stroke-width="0.8"/>
+      <path d="M148 174 L173 164 L192 180 L197 215 L187 253 L167 268 L148 253 L136 224 L133 194Z" fill="rgba(168,216,240,0.1)" stroke="rgba(168,216,240,0.18)" stroke-width="0.8"/>
+      <path d="M318 65 L358 57 L388 65 L398 82 L386 99 L358 104 L328 102 L313 84Z" fill="rgba(168,216,240,0.14)" stroke="rgba(168,216,240,0.22)" stroke-width="0.8"/>
+      <path d="M318 114 L362 105 L388 113 L396 144 L390 188 L373 224 L348 240 L323 230 L303 202 L296 164 L303 134Z" fill="rgba(168,216,240,0.1)" stroke="rgba(168,216,240,0.18)" stroke-width="0.8"/>
+      <path d="M398 50 L518 40 L598 45 L638 64 L648 94 L628 118 L588 126 L518 124 L458 114 L418 100 L393 80Z" fill="rgba(168,216,240,0.1)" stroke="rgba(168,216,240,0.18)" stroke-width="0.8"/>
+      <path d="M573 94 L618 89 L643 99 L646 122 L618 134 L593 129 L570 114Z" fill="rgba(168,216,240,0.16)" stroke="rgba(168,216,240,0.28)" stroke-width="0.8"/>
+      <circle cx="336" cy="122" r="8" fill="#5aaad4"/>
+      <circle cx="336" cy="122" r="16" fill="none" stroke="rgba(90,170,212,0.35)" stroke-width="1.5"/>
+      <circle cx="336" cy="122" r="24" fill="none" stroke="rgba(90,170,212,0.12)" stroke-width="1"/>
+      <text x="336" y="150" font-size="10" fill="rgba(168,216,240,0.6)" font-family="monospace" font-weight="700" text-anchor="middle">MEKNÈS</text>
+      <circle cx="618" cy="96" r="8" fill="#5aaad4"/>
+      <circle cx="618" cy="96" r="16" fill="none" stroke="rgba(90,170,212,0.35)" stroke-width="1.5"/>
+      <circle cx="618" cy="96" r="24" fill="none" stroke="rgba(90,170,212,0.12)" stroke-width="1"/>
+      <text x="618" y="124" font-size="10" fill="rgba(168,216,240,0.6)" font-family="monospace" font-weight="700" text-anchor="middle">SEOUL</text>
+      <circle cx="647" cy="102" r="6" fill="#a8d8f0"/>
+      <circle cx="647" cy="102" r="12" fill="none" stroke="rgba(168,216,240,0.3)" stroke-width="1"/>
+      <text x="666" y="118" font-size="9" fill="rgba(168,216,240,0.45)" font-family="monospace">OSAKA</text>
+      <path d="M336 122 Q476 52 618 96" stroke="rgba(90,170,212,0.28)" stroke-width="1.5" stroke-dasharray="6 4" fill="none"/>
+      <path d="M618 96 Q633 96 647 102" stroke="rgba(90,170,212,0.28)" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+    </svg>
+  </div>
+  <div class="locs">
+    <div class="loc"><div class="lfl">🇰🇷</div><div class="lcy">Seoul, Korea</div><div class="ldt">MSc · Korea University · 2024–2026</div></div>
+    <div class="loc"><div class="lfl">🇯🇵</div><div class="lcy">Osaka, Japan</div><div class="ldt">Exchange · Kansai Gaidai University</div></div>
+    <div class="loc"><div class="lfl">🇲🇦</div><div class="lcy">Meknès, Morocco</div><div class="ldt">Strategy Analyst · Agouzzal Group · 2022–2024</div></div>
+  </div>
+</div>
+
+<div class="contact" id="contact">
+  <div class="reveal">
+    <div class="cbig">Let's<br>build something.</div>
+    <p class="csub">Open to hybrid-friendly roles in strategy, operations, or consulting in Korea or Japan. If you're building something that needs someone who can both run the analysis and sit in the room let's talk.</p>
+  </div>
+  <div class="clinks reveal">
+    <a class="cl" href="mailto:laribimaryam0000@gmail.com"><span>laribimaryam0000@gmail.com</span><span class="ca">→</span></a>
+    <a class="cl" href="https://linkedin.com/in/maryam-laribi-7957541b8" target="_blank"><span>LinkedIn</span><span class="ca">→</span></a>
+    <a class="cl" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank"><span>GitHub</span><span class="ca">→</span></a>
+  </div>
+</div>
+
+<footer>
+  <span>MARYAM LARIBI · SEOUL 2026</span>
+  <span>STRATEGY & ANALYTICS</span>
+</footer>
+
+<script>
+const facts=['Three continents, one consistent output','Built dashboards leadership actually uses','GPA 4.3 out of 4.5','Four languages, zero Google Translate','Business Japanese from a semester in Osaka','Found 15–25% profit opportunities','9 countries, 12 years of data, one thesis','Six robustness tests. Findings held.'];
+let fi=0;
+function cycleFact(){
+  fi=(fi+1)%facts.length;
+  const el=document.getElementById('tt');
+  el.style.opacity='0';
+  setTimeout(()=>{el.textContent=facts[fi];el.style.opacity='1'},140);
+}
+document.getElementById('tt').style.transition='opacity 0.14s';
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target)}})},{threshold:0.05});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const sobs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skbar').forEach(b=>{b.style.width=b.dataset.w+'%'});sobs.unobserve(e.target)}})},{threshold:0.2});
+document.querySelectorAll('.skl,.skr').forEach(el=>sobs.observe(el));
+</script>
+</body>
+</html>
