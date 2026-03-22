@@ -20,15 +20,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta:hover{background:var(--blue4)}
 .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3cc870;margin-right:7px;animation:livepulse 2s ease-in-out infinite}
 @keyframes livepulse{0%,100%{box-shadow:0 0 0 0 rgba(60,200,112,0.4)}70%{box-shadow:0 0 0 6px rgba(60,200,112,0)}}
-
-/* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:480px 1fr;padding-top:58px;border-bottom:1.5px solid var(--black)}
 .hero-photo{position:relative;overflow:hidden;background:#deeef8;border-right:1.5px solid var(--black);min-height:500px}
-.hero-bg-circle{position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:480px;height:480px;border-radius:50%;background:var(--blue2);z-index:0}
-
 .chip{position:absolute;z-index:20;background:var(--white);border:1.5px solid var(--black);border-radius:10px;padding:9px 14px;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.04em;line-height:1.4;box-shadow:3px 3px 0 var(--black)}
 .c1{top:90px;left:22px}.c2{top:112px;right:18px}.c3{bottom:110px;left:18px}
-
 .hero-text{padding:72px 56px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
 .hero-deco{position:absolute;right:-20px;bottom:-40px;font-size:300px;font-weight:700;line-height:1;color:rgba(0,0,0,0.03);user-select:none;letter-spacing:-0.06em}
 .kicker{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);margin-bottom:24px;display:flex;align-items:center;gap:10px}
@@ -55,8 +50,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .tdiv{width:1px;height:14px;background:rgba(0,0,0,0.12)}
 .ttext{font-size:13px;font-weight:600;color:var(--black);transition:opacity .14s}
 .tarr{font-size:13px;color:var(--gray)}
-
-/* STRIP */
 .strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1.5px solid var(--black)}
 .sc{padding:26px 32px;border-right:1.5px solid var(--black);transition:background .15s;cursor:default}
 .sc:last-child{border-right:none}
@@ -64,14 +57,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sn{font-size:40px;font-weight:700;letter-spacing:-0.04em;line-height:1;color:var(--black)}
 .sn sub{font-size:17px;font-weight:400;color:var(--gray);vertical-align:baseline}
 .sl{font-size:12px;font-weight:500;color:var(--gray);margin-top:4px}
-
-/* WHATIF */
 .whatif{background:var(--blue);padding:72px 52px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;border-bottom:1.5px solid var(--black)}
 .wi-big{font-size:clamp(52px,9vw,108px);font-weight:700;letter-spacing:-0.05em;line-height:0.88;color:var(--black)}
 .wi-body{font-size:16px;color:var(--black);line-height:1.72;opacity:0.72;max-width:380px}
 .wi-body strong{opacity:1}
-
-/* EXP */
 .exps{padding:80px 52px;border-bottom:1.5px solid var(--black)}
 .sk{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gray);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .sk::before{content:'';display:block;width:24px;height:1.5px;background:var(--black)}
@@ -86,8 +75,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .ebulls li{font-size:13.5px;color:var(--gray);padding-left:16px;position:relative;line-height:1.55}
 .ebulls li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--blue4)}
 .ebadge{font-family:'Space Mono',monospace;font-size:10px;border:1px solid rgba(0,0,0,0.15);border-radius:6px;padding:7px 12px;color:var(--gray);text-align:center;line-height:1.5;align-self:start}
-
-/* THESIS */
 .thesis{padding:80px 52px;background:var(--light);border-bottom:1.5px solid var(--black)}
 .thesis-in{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
 .tc{border-radius:14px;overflow:hidden;border:1.5px solid rgba(0,0,0,0.1)}
@@ -96,8 +83,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .tpills{display:flex;gap:7px;flex-wrap:wrap}
 .tp{font-size:11px;font-weight:700;padding:5px 13px;border:1.5px solid var(--black);border-radius:100px;letter-spacing:0.02em}
 .tp.f{background:var(--blue);border-color:var(--blue);color:#1a3a50}
-
-/* PROJECTS */
 .ph{padding:48px 52px 0;border-top:1.5px solid var(--black)}
 .pg{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--black);border-top:1.5px solid var(--black)}
 .pc-card{background:var(--white);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .18s}
@@ -111,8 +96,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .pch{font-size:10px;font-weight:700;padding:3px 10px;border:1px solid rgba(0,0,0,0.15);border-radius:100px;color:var(--gray);letter-spacing:0.04em}
 .parr{font-size:12px;font-weight:700;color:var(--gray);margin-top:10px}
 .pc-card:hover .parr{color:var(--black)}
-
-/* PROCESS */
 .proc{border-top:1.5px solid var(--black)}
 .proc-h{padding:56px 52px 0;display:flex;align-items:baseline;gap:24px}
 .proc-wm{font-size:clamp(80px,14vw,160px);font-weight:700;letter-spacing:-0.06em;line-height:0.88;color:rgba(0,0,0,0.05);user-select:none}
@@ -125,8 +108,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .prtitle{font-size:17px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
 .prbody{font-size:13px;color:var(--gray);line-height:1.62}
 .prtag{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;padding:4px 12px;background:var(--blue);border-radius:100px;color:#1a3a50}
-
-/* SKILLS */
 .skwrap{display:grid;grid-template-columns:1fr 1fr;border-top:1.5px solid var(--black)}
 .skl{padding:60px 52px;border-right:1.5px solid var(--black)}
 .skr{padding:60px 52px}
@@ -139,8 +120,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .techs{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
 .tech{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;padding:7px 14px;border:1.5px solid var(--black);border-radius:6px;letter-spacing:0.04em;transition:all .15s;cursor:default}
 .tech:hover{background:var(--blue);border-color:var(--blue)}
-
-/* WORLD */
 .world{background:var(--black);padding:80px 52px;border-top:1.5px solid var(--black)}
 .world .sk{color:rgba(255,255,255,0.3)}
 .world .sk::before{background:rgba(255,255,255,0.2)}
@@ -152,8 +131,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .lfl{font-size:20px;margin-bottom:7px}
 .lcy{font-size:15px;font-weight:700;color:var(--white);letter-spacing:-0.01em;margin-bottom:2px}
 .ldt{font-size:12px;color:rgba(255,255,255,0.38)}
-
-/* CONTACT */
 .contact{display:grid;grid-template-columns:1fr 1fr;background:var(--blue2);border-top:1.5px solid var(--black);padding:100px 52px;gap:60px;align-items:center}
 .cbig{font-size:clamp(46px,7vw,86px);font-weight:700;letter-spacing:-0.04em;line-height:0.92;margin-bottom:20px}
 .csub{font-size:15px;color:var(--black);line-height:1.68;max-width:360px;opacity:0.7}
@@ -165,6 +142,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justify-content:space-between;align-items:center;font-family:'Space Mono',monospace;font-size:10px;color:var(--gray);letter-spacing:0.06em}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes geospin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.geo-spin{animation:geospin 22s linear infinite;transform-origin:210px 280px}
+.geo-spin-r{animation:geospin 16s linear infinite reverse;transform-origin:210px 280px}
 @media(max-width:860px){
   .hero{grid-template-columns:1fr}
   .hero-photo{height:60vw;min-height:280px}
@@ -197,94 +177,61 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
 <div class="hero">
   <div class="hero-photo">
     <div class="chip c1">GPA 4.3 / 4.5<br>Korea University</div>
-    <div class="chip c2">Available · Seoul &#127472;&#127479;</div>
-    <div class="chip c3">EN · AR · FR · JA</div>
-    <svg viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;top:0;left:0">
+    <div class="chip c2">Available - Seoul &#127472;&#127479;</div>
+    <div class="chip c3">EN - AR - FR - JA</div>
+    <svg viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0">
       <rect width="420" height="560" fill="#deeef8"/>
-
-      <!-- dot grid background -->
       <g opacity="0.15" fill="#2a6a9a">
         <circle cx="48" cy="56" r="2"/><circle cx="88" cy="56" r="2"/><circle cx="128" cy="56" r="2"/><circle cx="168" cy="56" r="2"/><circle cx="208" cy="56" r="2"/><circle cx="248" cy="56" r="2"/><circle cx="288" cy="56" r="2"/><circle cx="328" cy="56" r="2"/><circle cx="368" cy="56" r="2"/>
         <circle cx="48" cy="96" r="2"/><circle cx="88" cy="96" r="2"/><circle cx="128" cy="96" r="2"/><circle cx="168" cy="96" r="2"/><circle cx="208" cy="96" r="2"/><circle cx="248" cy="96" r="2"/><circle cx="288" cy="96" r="2"/><circle cx="328" cy="96" r="2"/><circle cx="368" cy="96" r="2"/>
-        <circle cx="48" cy="136" r="2"/><circle cx="88" cy="136" r="2"/><circle cx="368" cy="136" r="2"/><circle cx="328" cy="136" r="2"/>
+        <circle cx="48" cy="136" r="2"/><circle cx="88" cy="136" r="2"/><circle cx="328" cy="136" r="2"/><circle cx="368" cy="136" r="2"/>
         <circle cx="48" cy="424" r="2"/><circle cx="88" cy="424" r="2"/><circle cx="128" cy="424" r="2"/><circle cx="168" cy="424" r="2"/><circle cx="208" cy="424" r="2"/><circle cx="248" cy="424" r="2"/><circle cx="288" cy="424" r="2"/><circle cx="328" cy="424" r="2"/><circle cx="368" cy="424" r="2"/>
         <circle cx="48" cy="464" r="2"/><circle cx="88" cy="464" r="2"/><circle cx="128" cy="464" r="2"/><circle cx="168" cy="464" r="2"/><circle cx="208" cy="464" r="2"/><circle cx="248" cy="464" r="2"/><circle cx="288" cy="464" r="2"/><circle cx="328" cy="464" r="2"/><circle cx="368" cy="464" r="2"/>
         <circle cx="48" cy="504" r="2"/><circle cx="88" cy="504" r="2"/><circle cx="128" cy="504" r="2"/><circle cx="168" cy="504" r="2"/><circle cx="208" cy="504" r="2"/><circle cx="248" cy="504" r="2"/><circle cx="288" cy="504" r="2"/><circle cx="328" cy="504" r="2"/><circle cx="368" cy="504" r="2"/>
       </g>
-
-      <!-- concentric rings -->
       <circle cx="210" cy="280" r="195" stroke="#5aaad4" stroke-width="0.8" opacity="0.12" fill="none"/>
       <circle cx="210" cy="280" r="160" stroke="#5aaad4" stroke-width="0.8" opacity="0.15" fill="none"/>
       <circle cx="210" cy="280" r="125" stroke="#5aaad4" stroke-width="1" opacity="0.18" fill="none"/>
-
-      <!-- rotating outer square -->
       <rect x="105" y="175" width="210" height="210" rx="6" transform="rotate(12 210 280)" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.3"/>
-      <!-- rotating mid square -->
       <rect x="125" y="195" width="170" height="170" rx="5" transform="rotate(28 210 280)" fill="none" stroke="#5aaad4" stroke-width="1" opacity="0.22"/>
-      <!-- inner filled diamond -->
       <rect x="152" y="207" width="116" height="116" rx="8" transform="rotate(45 210 265)" fill="#c2e4f6" stroke="#5aaad4" stroke-width="1.2" opacity="0.65"/>
-
-      <!-- dashed orbit ring -->
       <circle cx="210" cy="280" r="90" stroke="#5aaad4" stroke-width="1.2" stroke-dasharray="8 5" opacity="0.35" fill="none"/>
-
-      <!-- cardinal dots on orbit -->
       <circle cx="210" cy="190" r="7" fill="#5aaad4" opacity="0.75"/>
       <circle cx="300" cy="280" r="7" fill="#5aaad4" opacity="0.75"/>
       <circle cx="210" cy="370" r="7" fill="#5aaad4" opacity="0.75"/>
       <circle cx="120" cy="280" r="7" fill="#5aaad4" opacity="0.75"/>
-
-      <!-- lines from center to orbit -->
       <line x1="210" y1="242" x2="210" y2="198" stroke="#5aaad4" stroke-width="1" opacity="0.28" stroke-dasharray="3 3"/>
       <line x1="252" y1="280" x2="293" y2="280" stroke="#5aaad4" stroke-width="1" opacity="0.28" stroke-dasharray="3 3"/>
       <line x1="210" y1="318" x2="210" y2="363" stroke="#5aaad4" stroke-width="1" opacity="0.28" stroke-dasharray="3 3"/>
       <line x1="168" y1="280" x2="127" y2="280" stroke="#5aaad4" stroke-width="1" opacity="0.28" stroke-dasharray="3 3"/>
-
-      <!-- center circle -->
       <circle cx="210" cy="280" r="42" fill="#5aaad4" opacity="0.95"/>
       <circle cx="210" cy="280" r="30" fill="#2a7ab4" opacity="0.9"/>
       <text x="210" y="287" font-size="17" font-weight="700" fill="white" font-family="monospace" text-anchor="middle" letter-spacing="3">ML</text>
-
-      <!-- corner accent squares -->
       <rect x="44" y="220" width="20" height="20" rx="3" fill="#a8d8f0" opacity="0.55"/>
       <rect x="356" y="220" width="20" height="20" rx="3" fill="#a8d8f0" opacity="0.55"/>
       <rect x="44" y="300" width="20" height="20" rx="3" fill="#a8d8f0" opacity="0.55"/>
       <rect x="356" y="300" width="20" height="20" rx="3" fill="#a8d8f0" opacity="0.55"/>
-
-      <!-- arcs top and bottom -->
       <path d="M110 128 Q210 75 310 128" stroke="#5aaad4" stroke-width="1.2" fill="none" opacity="0.22" stroke-dasharray="7 5"/>
       <path d="M110 432 Q210 485 310 432" stroke="#5aaad4" stroke-width="1.2" fill="none" opacity="0.22" stroke-dasharray="7 5"/>
-
-      <!-- label chips -->
       <rect x="30" y="252" width="62" height="16" rx="3" fill="rgba(255,255,255,0.8)"/>
-      <text x="61" y="263.5" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">STRATEGY</text>
+      <text x="61" y="263" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">STRATEGY</text>
       <rect x="328" y="252" width="62" height="16" rx="3" fill="rgba(255,255,255,0.8)"/>
-      <text x="359" y="263.5" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">ANALYTICS</text>
+      <text x="359" y="263" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">ANALYTICS</text>
       <rect x="158" y="158" width="104" height="16" rx="3" fill="rgba(255,255,255,0.8)"/>
-      <text x="210" y="169.5" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">OPERATIONS</text>
+      <text x="210" y="169" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">OPERATIONS</text>
       <rect x="140" y="368" width="140" height="16" rx="3" fill="rgba(255,255,255,0.8)"/>
-      <text x="210" y="379.5" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">SUPPLY CHAIN</text>
-
-      <!-- animated spinning groups -->
-      <style>.geo-spin{animation:geospin 22s linear infinite;transform-origin:210px 280px}.geo-spin-r{animation:geospin 16s linear infinite reverse;transform-origin:210px 280px}@keyframes geospin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}</style>
-      <g class="geo-spin">
-        <circle cx="210" cy="82" r="5" fill="#5aaad4" opacity="0.55"/>
-        <circle cx="358" cy="335" r="4" fill="#3a8ab4" opacity="0.45"/>
-        <circle cx="62" cy="225" r="4" fill="#3a8ab4" opacity="0.45"/>
-      </g>
-      <g class="geo-spin-r">
-        <rect x="199" y="54" width="22" height="22" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.38"/>
-        <rect x="348" y="352" width="20" height="20" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.35"/>
-        <rect x="52" y="170" width="20" height="20" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.35"/>
-      </g>
+      <text x="210" y="379" font-size="7.5" fill="#2a5a8a" font-family="monospace" font-weight="700" text-anchor="middle">SUPPLY CHAIN</text>
+      <g class="geo-spin"><circle cx="210" cy="82" r="5" fill="#5aaad4" opacity="0.55"/><circle cx="358" cy="335" r="4" fill="#3a8ab4" opacity="0.45"/><circle cx="62" cy="225" r="4" fill="#3a8ab4" opacity="0.45"/></g>
+      <g class="geo-spin-r"><rect x="199" y="54" width="22" height="22" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.38"/><rect x="348" y="352" width="20" height="20" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.35"/><rect x="52" y="170" width="20" height="20" rx="4" fill="none" stroke="#5aaad4" stroke-width="1.5" opacity="0.35"/></g>
     </svg>
   </div>
 
   <div class="hero-text reveal">
     <div class="hero-deco">ML</div>
-    <div class="kicker">Strategy · Analytics · Operations</div>
+    <div class="kicker">Strategy - Analytics - Operations</div>
     <div class="hero-name">Mary<span class="name-hl">am</span><br>Laribi.</div>
-    <div class="hero-role">MSc Candidate · Korea University · Seoul</div>
-    <p class="hero-desc">I turn messy data into decisions people actually make. Spent two years doing that at an olive oil company in Morocco built the dashboards, ran the numbers, sat in the room when it mattered. Now finishing my MSc in Seoul, and ready for what's next.</p>
+    <div class="hero-role">MSc Candidate - Korea University - Seoul</div>
+    <p class="hero-desc">I take data that nobody knows what to do with and turn it into something that actually gets decided on. Did that for two years at an olive oil company in Morocco. Now finishing my MSc in Seoul and ready for what is next.</p>
     <div class="tags">
       <span class="tag f">Supply Chain</span>
       <span class="tag f">Strategy</span>
@@ -295,19 +242,19 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
     </div>
     <div class="btns">
       <a class="btn btn-s" href="#contact">Get in touch</a>
-      <a class="btn btn-g" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank">GitHub →</a>
+      <a class="btn btn-g" href="https://github.com/MaryamAnalytics100/Analytics-Portfolio" target="_blank">GitHub</a>
     </div>
     <div class="ticker" onclick="cycleFact()">
       <span class="tlabel">Quick fact</span>
       <div class="tdiv"></div>
-      <span class="ttext" id="tt">Operated across 3 continents</span>
-      <span class="tarr">↻</span>
+      <span class="ttext" id="tt">3 continents on one CV</span>
+      <span class="tarr">&#8635;</span>
     </div>
   </div>
 </div>
 
 <div class="strip reveal">
-  <div class="sc"><div class="sn">4.3<sub>/4.5</sub></div><div class="sl">MSc GPA · Korea University</div></div>
+  <div class="sc"><div class="sn">4.3<sub>/4.5</sub></div><div class="sl">MSc GPA - Korea University</div></div>
   <div class="sc"><div class="sn">9<sub> countries</sub></div><div class="sl">Countries in my thesis</div></div>
   <div class="sc"><div class="sn">2+<sub> yrs</sub></div><div class="sl">Years of real work</div></div>
   <div class="sc"><div class="sn">4<sub> langs</sub></div><div class="sl">Languages, zero Google Translate</div></div>
@@ -315,50 +262,50 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
 
 <div class="whatif reveal">
   <div class="wi-big">What if<br>data<br>could<br>decide?</div>
-  <p class="wi-body">Most analytics stops at the dashboard. I go further - translating quantitative signals into strategic moves leadership can act on. From olive oil margins in Morocco to Korea–ASEAN geopolitical alignment, the throughline is the same: <strong>rigorous method, clear story, real outcome.</strong></p>
+  <p class="wi-body">Most analytics stops at the dashboard. I keep going until someone in the room makes a decision. Olive oil margins in Morocco, geopolitical alignment across Southeast Asia. Different problems, same approach: get the numbers right, then make them impossible to ignore.</p>
 </div>
 
 <div class="exps" id="experience">
   <div class="sk reveal">Experience</div>
-  <div class="stitle reveal">Where I've<br>done the work.</div>
+  <div class="stitle reveal">Where I have been.</div>
   <div class="exp-list">
     <div class="er reveal">
       <div class="en">01</div>
       <div>
-        <div class="erole">Strategy & Analytics Analyst</div>
-        <div class="eco">Les Huileries de Meknès - Agouzzal Group · Morocco</div>
+        <div class="erole">Strategy and Analytics Analyst</div>
+        <div class="eco">Les Huileries de Meknès - Agouzzal Group - Morocco</div>
         <ul class="ebulls">
-          <li>Identified 15–25% profitability improvement through cost structure and margin diagnostics - presented to senior management, directly shaping pricing and resource strategy</li>
-          <li>Built forecasting models and KPI dashboards that senior management adopted for strategic planning. They're still using them.</li>
-          <li>Ran supplier performance analysis that reduced cost exposure across key input categories.</li>
-          <li>Navigated ops, finance, and management across three languages Arabic, French, English in a fast-moving environment.</li>
+          <li>Ran cost structure and margin diagnostics that found 15 to 25% profitability improvements sitting there unclaimed. Built the presentations that got leadership to act on it.</li>
+          <li>Built forecasting models and KPI dashboards that senior management adopted for planning. They are still using them.</li>
+          <li>Led supplier performance analysis that reduced cost exposure across key input categories.</li>
+          <li>Worked across operations, finance, and management in Arabic, French, and English.</li>
         </ul>
       </div>
-      <div class="ebadge">Jul 2022<br>-<br>May 2024</div>
+      <div class="ebadge">Jul 2022<br>to<br>May 2024</div>
     </div>
     <div class="er reveal">
       <div class="en">02</div>
       <div>
-        <div class="erole">MSc - Logistics, Services & Operations Management</div>
-        <div class="eco">Korea University · Seoul · GPA 4.3/4.5</div>
+        <div class="erole">MSc - Logistics, Services and Operations Management</div>
+        <div class="eco">Korea University - Seoul - GPA 4.3/4.5</div>
         <ul class="ebulls">
-          <li>GPA 4.3/4.5. Coursework in Quantitative Modeling, Supply Chain Optimization, Decision Analytics, and Financial Performance Measurement.</li>
+          <li>Coursework in Quantitative Modeling, Supply Chain Optimization, Decision Analytics, and Financial Performance Measurement.</li>
           <li>Thesis: built a four-layer institutional embeddedness index from scratch and ran panel regression across 9 countries to test whether supply chain ties predict political alignment.</li>
           <li>Six robustness tests later the findings held.</li>
         </ul>
       </div>
-      <div class="ebadge">Sep 2024<br>-<br>Jun 2026</div>
+      <div class="ebadge">Sep 2024<br>to<br>Jun 2026</div>
     </div>
     <div class="er reveal">
       <div class="en">03</div>
       <div>
         <div class="erole">BBA - Business Administration, Summa Cum Laude</div>
-        <div class="eco">Al Akhawayn University, Morocco · Exchange: Kansai Gaidai University, Osaka</div>
+        <div class="eco">Al Akhawayn University, Morocco - Exchange: Kansai Gaidai University, Osaka</div>
         <ul class="ebulls">
-          <li>Graduated summa cum laude. Did an exchange semester at Kansai Gaidai University in Osaka left with business Japanese and a genuine love for how seriously Japan takes craft.</li>
+          <li>Graduated summa cum laude. Spent a semester at Kansai Gaidai University in Osaka, came back with business-level Japanese and a real feel for how things work there.</li>
         </ul>
       </div>
-      <div class="ebadge">Sep 2017<br>-<br>Jan 2022</div>
+      <div class="ebadge">Sep 2017<br>to<br>Jan 2022</div>
     </div>
   </div>
 </div>
@@ -383,17 +330,17 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
         <text x="228" y="278" font-size="9" fill="rgba(0,0,0,0.3)" font-family="monospace">2017</text>
         <text x="408" y="278" font-size="9" fill="rgba(0,0,0,0.3)" font-family="monospace">2023</text>
         <rect x="296" y="30" width="132" height="20" rx="4" fill="rgba(90,170,212,0.15)"/>
-        <text x="362" y="44" font-size="9" fill="#3a7a9a" font-family="monospace" font-weight="700" text-anchor="middle">DepthIndex L2+L4 ↑</text>
+        <text x="362" y="44" font-size="9" fill="#3a7a9a" font-family="monospace" font-weight="700" text-anchor="middle">DepthIndex L2+L4</text>
         <text x="240" y="175" font-size="60" fill="rgba(90,170,212,0.07)" font-family="sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-2">ASEAN</text>
       </svg>
     </div>
     <div>
-      <div class="ttitle">Supply Chain Embeddedness and Political Alignment: Evidence from Korea–ASEAN Institutional Cooperation</div>
-      <p class="tdesc">Quantitative study examining whether deepening bilateral institutional embeddedness in supply chain partnerships precedes broader geopolitical alignment. Custom four-layer depth index across 9 ASEAN countries, 2012–2023. Dyadic panel regression, first-difference methodology, six robustness tests.</p>
+      <div class="ttitle">Supply Chain Embeddedness and Political Alignment: Evidence from Korea-ASEAN Institutional Cooperation</div>
+      <p class="tdesc">The question: does deepening supply chain ties with a country pull you into political alignment with it too? I built a four-layer institutional index to measure that across 9 ASEAN countries from 2012 to 2023 and ran the panel regression to find out. Layers 2 and 4 turned out to matter. A trade agreement alone does not.</p>
       <div class="tpills">
         <span class="tp f">Panel Regression</span>
-        <span class="tp f">9 countries · 12 yrs</span>
-        <span class="tp">Python · R</span>
+        <span class="tp f">9 countries - 12 yrs</span>
+        <span class="tp">Python - R</span>
         <span class="tp">First-difference</span>
         <span class="tp">6 robustness tests</span>
       </div>
@@ -407,7 +354,7 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
     <div class="stitle" style="margin-bottom:28px">Selected projects.</div>
   </div>
   <div class="pg">
-    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics/Analytics-Portfolio/blob/main/Forecasting_Model.ipynb" target="_blank">
+    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics100/Analytics-Portfolio/blob/main/Forecasting_Model.ipynb" target="_blank">
       <div class="pthumb" style="background:#daeeff">
         <svg width="380" height="190" viewBox="0 0 380 190" fill="none">
           <rect width="380" height="190" fill="#daeeff"/>
@@ -419,19 +366,19 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
           <circle cx="290" cy="56" r="5" fill="#5aaad4" stroke="white" stroke-width="2"/>
           <circle cx="366" cy="27" r="5" fill="#1a3a5a" stroke="white" stroke-width="2"/>
           <rect x="262" y="20" width="86" height="18" rx="4" fill="rgba(26,58,90,0.1)"/>
-          <text x="305" y="33" font-size="9" fill="#1a3a5a" font-family="monospace" font-weight="700" text-anchor="middle">FORECAST ↗</text>
+          <text x="305" y="33" font-size="9" fill="#1a3a5a" font-family="monospace" font-weight="700" text-anchor="middle">FORECAST</text>
           <line x1="40" y1="150" x2="340" y2="150" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
         </svg>
       </div>
       <div class="pbody">
-        <div class="pnum">01 - Python · Time Series</div>
+        <div class="pnum">01 - Python - Time Series</div>
         <div class="pname">Demand Forecasting Model</div>
         <p class="pdesc">Forecasting model built to predict demand patterns and inform inventory and procurement decisions. The kind of thing that saves money quietly.</p>
         <div class="pchips"><span class="pch">Python</span><span class="pch">Pandas</span><span class="pch">Time Series</span></div>
-        <div class="parr">View on GitHub →</div>
+        <div class="parr">View on GitHub</div>
       </div>
     </a>
-    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank">
+    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics100/Analytics-Portfolio" target="_blank">
       <div class="pthumb" style="background:#eae4ff">
         <svg width="380" height="190" viewBox="0 0 380 190" fill="none">
           <rect width="380" height="190" fill="#eae4ff"/>
@@ -458,14 +405,14 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
         </svg>
       </div>
       <div class="pbody">
-        <div class="pnum">02 - R · Index Design</div>
+        <div class="pnum">02 - R - Index Design</div>
         <div class="pname">Institutional Embeddedness Index</div>
-        <p class="pdesc">Custom four-layer index: FTA depth, joint committees, AEO mutual recognition, state-linked production across 9 ASEAN countries, 2012–2023.</p>
+        <p class="pdesc">Custom four-layer index: FTA depth, joint committees, AEO mutual recognition, state-linked production across 9 ASEAN countries, 2012 to 2023.</p>
         <div class="pchips"><span class="pch">R</span><span class="pch">Panel Data</span><span class="pch">ASEAN</span></div>
-        <div class="parr">View on GitHub →</div>
+        <div class="parr">View on GitHub</div>
       </div>
     </a>
-    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank">
+    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics100/Analytics-Portfolio" target="_blank">
       <div class="pthumb" style="background:#ccf4e0">
         <svg width="380" height="190" viewBox="0 0 380 190" fill="none">
           <rect width="380" height="190" fill="#ccf4e0"/>
@@ -473,7 +420,7 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
           <text x="68" y="40" font-size="17" fill="#1a6a40" font-family="monospace" font-weight="800" text-anchor="middle">+22%</text>
           <text x="68" y="58" font-size="8" fill="rgba(26,106,64,0.5)" font-family="monospace" text-anchor="middle">MARGIN GAIN</text>
           <rect x="126" y="16" width="96" height="54" rx="7" fill="white" opacity="0.85"/>
-          <text x="174" y="40" font-size="17" fill="#1a6a40" font-family="monospace" font-weight="800" text-anchor="middle">↓18%</text>
+          <text x="174" y="40" font-size="17" fill="#1a6a40" font-family="monospace" font-weight="800" text-anchor="middle">-18%</text>
           <text x="174" y="58" font-size="8" fill="rgba(26,106,64,0.5)" font-family="monospace" text-anchor="middle">COST EXPO.</text>
           <rect x="232" y="16" width="128" height="54" rx="7" fill="white" opacity="0.85"/>
           <text x="296" y="40" font-size="17" fill="#1a6a40" font-family="monospace" font-weight="800" text-anchor="middle">4.3 / 5</text>
@@ -492,14 +439,14 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
         </svg>
       </div>
       <div class="pbody">
-        <div class="pnum">03 - Excel · Operations</div>
-        <div class="pname">KPI & Margin Diagnostics Dashboard</div>
+        <div class="pnum">03 - Excel - Operations</div>
+        <div class="pname">KPI and Margin Diagnostics Dashboard</div>
         <p class="pdesc">Executive dashboard tracking profitability, supplier performance, and operational KPIs. Built for senior leadership at an olive oil producer and actually used.</p>
         <div class="pchips"><span class="pch">Excel</span><span class="pch">KPI Design</span><span class="pch">Operations</span></div>
-        <div class="parr">View on GitHub →</div>
+        <div class="parr">View on GitHub</div>
       </div>
     </a>
-    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank">
+    <a class="pc-card reveal" href="https://github.com/MaryamAnalytics100/Analytics-Portfolio" target="_blank">
       <div class="pthumb" style="background:#fff0e0">
         <svg width="380" height="190" viewBox="0 0 380 190" fill="none">
           <rect width="380" height="190" fill="#fff0e0"/>
@@ -517,16 +464,16 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
           <circle cx="288" cy="68" r="5" fill="#e07850" opacity="0.8"/>
           <circle cx="322" cy="57" r="5" fill="#e07850" opacity="0.8"/>
           <rect x="238" y="132" width="92" height="22" rx="5" fill="rgba(200,80,48,0.1)"/>
-          <text x="284" y="147" font-size="10" fill="#c84a30" font-family="monospace" font-weight="700" text-anchor="middle">R² = 0.84 ✓</text>
-          <text x="44" y="182" font-size="9" fill="rgba(0,0,0,0.25)" font-family="monospace">supply chain depth →</text>
+          <text x="284" y="147" font-size="10" fill="#c84a30" font-family="monospace" font-weight="700" text-anchor="middle">R2 = 0.84</text>
+          <text x="44" y="182" font-size="9" fill="rgba(0,0,0,0.25)" font-family="monospace">supply chain depth</text>
         </svg>
       </div>
       <div class="pbody">
-        <div class="pnum">04 - R · Econometrics</div>
+        <div class="pnum">04 - R - Econometrics</div>
         <div class="pname">Robustness Testing Suite</div>
-        <p class="pdesc">Six robustness tests on the panel regression results clustered SEs, leave-one-out, random effects, placebo, and more. Results held across all of them.</p>
+        <p class="pdesc">Six robustness tests on the panel regression results. Clustered SEs, leave-one-out, random effects, placebo, and more. Results held across all of them.</p>
         <div class="pchips"><span class="pch">R</span><span class="pch">Econometrics</span><span class="pch">Research</span></div>
-        <div class="parr">View on GitHub →</div>
+        <div class="parr">View on GitHub</div>
       </div>
     </a>
   </div>
@@ -538,9 +485,9 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
     <div class="proc-hd">How I work.</div>
   </div>
   <div class="proc-cells">
-    <div class="prc"><div class="prn">01</div><div class="prtitle">Start with the data, not a hunch</div><p class="prbody">I come to the table with analysis, not assumptions. Margin diagnostics, regression, scenario modeling then strategy.</p><span class="prtag">Analytics first</span></div>
-    <div class="prc"><div class="prn">02</div><div class="prtitle">Build things that still work in six months</div><p class="prbody">Not a one-time deliverable. I build the dashboard that becomes how leadership tracks performance, the model that gets embedded in how the team thinks.</p><span class="prtag">Built to last</span></div>
-    <div class="prc"><div class="prn">03</div><div class="prtitle">Make the insight land</div><p class="prbody">Complex data, clear output. The analysis is only useful if the person across the table understands what to do with it.</p><span class="prtag">Clear communication</span></div>
+    <div class="prc"><div class="prn">01</div><div class="prtitle">Start with the numbers</div><p class="prbody">I come to the table with analysis, not assumptions. Margin diagnostics, regression, scenario modeling then strategy.</p><span class="prtag">Analytics first</span></div>
+    <div class="prc"><div class="prn">02</div><div class="prtitle">Build things that stick</div><p class="prbody">Not a one-time deliverable. I build the dashboard that becomes how leadership tracks performance, the model that gets embedded in how the team thinks.</p><span class="prtag">Built to last</span></div>
+    <div class="prc"><div class="prn">03</div><div class="prtitle">Make the insight land</div><p class="prbody">Complex data, clear output. The analysis is only useful if the person across the table understands what to do with it.</p><span class="prtag">Clear every time</span></div>
   </div>
 </div>
 
@@ -549,15 +496,15 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
     <div class="sk">Skills</div>
     <div class="stitle" style="font-size:clamp(28px,4vw,42px);margin-bottom:0">What I<br>bring to the table.</div>
     <div class="sklist">
-      <div class="skrow"><div class="sklabel">Strategy & Exec Ops <span>Senior</span></div><div class="sktrack"><div class="skbar" data-w="92"></div></div></div>
-      <div class="skrow"><div class="sklabel">Forecasting & Analytics <span>Advanced</span></div><div class="sktrack"><div class="skbar" data-w="88"></div></div></div>
-      <div class="skrow"><div class="sklabel">Quantitative Research <span>Advanced</span></div><div class="sktrack"><div class="skbar" data-w="85"></div></div></div>
-      <div class="skrow"><div class="sklabel">Supply Chain Mgmt <span>Proficient</span></div><div class="sktrack"><div class="skbar" data-w="80"></div></div></div>
-      <div class="skrow"><div class="sklabel">Stakeholder Comms <span>Senior</span></div><div class="sktrack"><div class="skbar" data-w="90"></div></div></div>
+      <div class="skrow"><div class="sklabel">Strategy and Exec Ops <span>2 years hands-on</span></div><div class="sktrack"><div class="skbar" data-w="92"></div></div></div>
+      <div class="skrow"><div class="sklabel">Forecasting and Analytics <span>My thing</span></div><div class="sktrack"><div class="skbar" data-w="88"></div></div></div>
+      <div class="skrow"><div class="sklabel">Quantitative Research <span>Thesis-proven</span></div><div class="sktrack"><div class="skbar" data-w="85"></div></div></div>
+      <div class="skrow"><div class="sklabel">Supply Chain Mgmt <span>Getting stronger</span></div><div class="sktrack"><div class="skbar" data-w="80"></div></div></div>
+      <div class="skrow"><div class="sklabel">Stakeholder Comms <span>C-suite approved</span></div><div class="sktrack"><div class="skbar" data-w="90"></div></div></div>
     </div>
   </div>
   <div class="skr reveal">
-    <div class="sk">Tools & Languages</div>
+    <div class="sk">Tools and Languages</div>
     <div style="font-size:12px;font-weight:600;color:var(--gray);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;margin-top:8px">Technical</div>
     <div class="techs">
       <span class="tech">Python</span><span class="tech">R</span><span class="tech">SQL</span>
@@ -569,7 +516,7 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
       <div class="skrow"><div class="sklabel">English <span>Fluent</span></div><div class="sktrack"><div class="skbar" data-w="98" style="background:#5aaad4"></div></div></div>
       <div class="skrow"><div class="sklabel">Arabic <span>Native</span></div><div class="sktrack"><div class="skbar" data-w="100" style="background:#2ab870"></div></div></div>
       <div class="skrow"><div class="sklabel">French <span>Fluent</span></div><div class="sktrack"><div class="skbar" data-w="96" style="background:#9468d4"></div></div></div>
-      <div class="skrow"><div class="sklabel">Japanese 🇯🇵 <span>Business professional</span></div><div class="sktrack"><div class="skbar" data-w="74" style="background:#c84a8a"></div></div></div>
+      <div class="skrow"><div class="sklabel">Japanese &#127471;&#127477; <span>Business professional</span></div><div class="sktrack"><div class="skbar" data-w="74" style="background:#c84a8a"></div></div></div>
     </div>
   </div>
 </div>
@@ -589,7 +536,7 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
       <circle cx="336" cy="122" r="8" fill="#5aaad4"/>
       <circle cx="336" cy="122" r="16" fill="none" stroke="rgba(90,170,212,0.35)" stroke-width="1.5"/>
       <circle cx="336" cy="122" r="24" fill="none" stroke="rgba(90,170,212,0.12)" stroke-width="1"/>
-      <text x="336" y="150" font-size="10" fill="rgba(168,216,240,0.6)" font-family="monospace" font-weight="700" text-anchor="middle">MEKNÈS</text>
+      <text x="336" y="150" font-size="10" fill="rgba(168,216,240,0.6)" font-family="monospace" font-weight="700" text-anchor="middle">MEKNES</text>
       <circle cx="618" cy="96" r="8" fill="#5aaad4"/>
       <circle cx="618" cy="96" r="16" fill="none" stroke="rgba(90,170,212,0.35)" stroke-width="1.5"/>
       <circle cx="618" cy="96" r="24" fill="none" stroke="rgba(90,170,212,0.12)" stroke-width="1"/>
@@ -602,39 +549,38 @@ footer{padding:22px 52px;border-top:1.5px solid var(--black);display:flex;justif
     </svg>
   </div>
   <div class="locs">
-    <div class="loc"><div class="lfl">🇰🇷</div><div class="lcy">Seoul, Korea</div><div class="ldt">MSc · Korea University · 2024–2026</div></div>
-    <div class="loc"><div class="lfl">🇯🇵</div><div class="lcy">Osaka, Japan</div><div class="ldt">Exchange · Kansai Gaidai University</div></div>
-    <div class="loc"><div class="lfl">🇲🇦</div><div class="lcy">Meknès, Morocco</div><div class="ldt">Strategy Analyst · Agouzzal Group · 2022–2024</div></div>
+    <div class="loc"><div class="lfl">&#127472;&#127479;</div><div class="lcy">Seoul, Korea</div><div class="ldt">MSc - Korea University - 2024 to 2026</div></div>
+    <div class="loc"><div class="lfl">&#127471;&#127477;</div><div class="lcy">Osaka, Japan</div><div class="ldt">Exchange - Kansai Gaidai University</div></div>
+    <div class="loc"><div class="lfl">&#127474;&#127462;</div><div class="lcy">Meknes, Morocco</div><div class="ldt">Strategy Analyst - Agouzzal Group - 2022 to 2024</div></div>
   </div>
 </div>
 
 <div class="contact" id="contact">
   <div class="reveal">
-    <div class="cbig">Let's<br>build something.</div>
-    <p class="csub">Open to hybrid-friendly roles in strategy, operations, or consulting in Korea or Japan. If you're building something that needs someone who can both run the analysis and sit in the room let's talk.</p>
+    <div class="cbig">Let's build<br>something.</div>
+    <p class="csub">Open to hybrid-friendly roles in strategy, operations, or consulting in Korea or Japan. If you are building something that needs someone who can both run the analysis and sit in the room, let's talk.</p>
   </div>
   <div class="clinks reveal">
-    <a class="cl" href="/cdn-cgi/l/email-protection#a1cdc0d3c8c3c8ccc0d3d8c0cc91919191e1c6ccc0c8cd8fc2cecc"><span><span class="__cf_email__" data-cfemail="d8b4b9aab1bab1b5b9aaa1b9b5e8e8e8e898bfb5b9b1b4f6bbb7b5">[email&#160;protected]</span></span><span class="ca">→</span></a>
-    <a class="cl" href="https://linkedin.com/in/maryam-laribi-7957541b8" target="_blank"><span>LinkedIn</span><span class="ca">→</span></a>
-    <a class="cl" href="https://github.com/MaryamAnalytics/Analytics-Portfolio" target="_blank"><span>GitHub</span><span class="ca">→</span></a>
+    <a class="cl" href="mailto:laribimaryam0000@gmail.com"><span>laribimaryam0000@gmail.com</span><span class="ca">&#8594;</span></a>
+    <a class="cl" href="https://linkedin.com/in/maryam-laribi-7957541b8" target="_blank"><span>LinkedIn</span><span class="ca">&#8594;</span></a>
+    <a class="cl" href="https://github.com/MaryamAnalytics100/Analytics-Portfolio" target="_blank"><span>GitHub</span><span class="ca">&#8594;</span></a>
   </div>
 </div>
 
 <footer>
-  <span>MARYAM LARIBI · SEOUL 2026</span>
-  <span>STRATEGY & ANALYTICS</span>
+  <span>MARYAM LARIBI - SEOUL 2026</span>
+  <span>STRATEGY AND ANALYTICS</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const facts=['Three continents, one consistent output','Built dashboards leadership actually uses','GPA 4.3 out of 4.5','Four languages, zero Google Translate','Business Japanese from a semester in Osaka','Found 15–25% profit opportunities','9 countries, 12 years of data, one thesis','Six robustness tests. Findings held.'];
+<script>
+const facts=['3 continents on one CV','Built dashboards leadership actually uses','GPA 4.3 out of 4.5','Four languages, zero Google Translate','Business Japanese from a semester in Osaka','Found 15 to 25% profit sitting unclaimed','9 countries. 12 years of data. One thesis.','Six robustness tests. Findings held.'];
 let fi=0;
-function cycleFact(){
-  fi=(fi+1)%facts.length;
-  const el=document.getElementById('tt');
-  el.style.opacity='0';
-  setTimeout(()=>{el.textContent=facts[fi];el.style.opacity='1'},140);
-}
+function cycleFact(){fi=(fi+1)%facts.length;const el=document.getElementById('tt');el.style.opacity='0';setTimeout(()=>{el.textContent=facts[fi];el.style.opacity='1'},140);}
 document.getElementById('tt').style.transition='opacity 0.14s';
 const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target)}})},{threshold:0.05});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-const sobs=new IntersectionObserver(entries=>{entries
+const sobs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skbar').forEach(b=>{b.style.width=b.dataset.w+'%'});sobs.unobserve(e.target)}})},{threshold:0.2});
+document.querySelectorAll('.skl,.skr').forEach(el=>sobs.observe(el));
+</script>
+</body>
+</html>
